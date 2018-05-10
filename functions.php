@@ -16,11 +16,20 @@ echo substr( $myString, -5, -1 ) . "<br/>"; // Displays 'orld'
 
 echo "<hr>";
 
-$myString = "Hello, world!" ;
-echo $myString[0 ] . "<br />"; // Displays 'H'
-echo $myString[7 ] . "<br />"; // Displays 'w'
-     $myString[12] = '?'     ; // Substring ! => ?
-echo $myString . "<br />"    ; // Displays 'Hello, world?'
+$myString = "Hello, world!";
+echo $myString[0 ] . "<br/>"; // Displays 'H'
+echo $myString[7 ] . "<br/>"; // Displays 'w'
+     $myString[12] = '?'    ; // Substring ! => ?
+echo $myString . "<br/>"    ; // Displays 'Hello, world?'
+
+echo "<hr>";
+
+# 5.2  Searching Strings
+$myString = "Hello, world!";
+echo strstr( $myString, "wor" ) . "<br/>";                    // Displays 'world!'
+echo ( strstr( $myString, "xtz" ) ? "Yes" : "No" ) . "<br/>"; // Displays 'No'
+echo strstr( $myString, "wor", true );                        // Displays 'Hello,'
+# Returns the portion from the start of the string to the character before the found text:
 
 echo "<hr>";
 
