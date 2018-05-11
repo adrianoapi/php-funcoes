@@ -46,8 +46,17 @@ echo strstr( $myString, "wor", true ) . "<br/>";              // Displays 'Hello
 echo strpos( $myString, "wor" ) . "<br/>";                    // Displays '7'
 echo var_dump(strpos( $myString, "xyz" ));                    // Displays '' (false)
 echo !strpos( $myString, "Hel" ) ? "Not found <br/>" : TRUE;  // Displays 'Not found'
-echo strpos( $myString, "o" ) . "<br />";  // Displays '4'
-echo strrpos( $myString, "o" ) . "<br />"; // Displays '8'
+echo strpos( $myString, "o" ) . "<br />";                     // Displays '4'
+echo strrpos( $myString, "o" ) . "<br />";                    // Displays '8'
+
+$pos = 0;
+while(($pos = strpos($myString, "l", $pos)) !== FALSE){
+    
+    echo "The letter 'l' was found at position: {$pos}<br/>";
+    $pos++;
+    
+}
+
 echo "<hr>";
 
 $religion = 'Hebrew';
