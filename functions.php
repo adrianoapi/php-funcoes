@@ -37,6 +37,19 @@ echo $myString . "<br/>"    ;                                                   
 echo "<hr>";
 
 # 5.2  Searching Strings
+/*
++---------------+-----------------------------+
+| Function      | Case-Insensitive Equivalent |
++---------------+-----------------------------+
+| strstr()      | stristr()                   |
++---------------+-----------------------------+
+| strpos()      | stripos()                   |
++---------------+-----------------------------+
+| strrpos()     | strripos()                  |
++---------------+-----------------------------+
+| str_replace() | str_ireplace()              |
++---------------+-----------------------------+
+*/
 echo strstr( $myString, "wor" ) . "<br/>";                                              // Displays 'world! The beautiful world?'
 echo ( strstr( $myString, "xtz" ) ? "Yes" : "No" ) . "<br/>";                           // Displays 'No'
 # Returns the portion from the start of the string to the character before the found text:
