@@ -39,15 +39,15 @@ echo "<hr>";
 
 # 5.2  Searching Strings
 $myString = "Hello, world!";
-echo strstr( $myString, "wor" ) . "<br/>";                    // Displays 'world!'
-echo ( strstr( $myString, "xtz" ) ? "Yes" : "No" ) . "<br/>"; // Displays 'No'
+echo strstr( $myString, "wor" ) . "<br/>";                                                  // Displays 'world!'
+echo ( strstr( $myString, "xtz" ) ? "Yes" : "No" ) . "<br/>";                               // Displays 'No'
 # Returns the portion from the start of the string to the character before the found text:
-echo strstr( $myString, "wor", true ) . "<br/>";              // Displays 'Hello,'
-echo strpos( $myString, "wor" ) . "<br/>";                    // Displays '7'
-echo var_dump(strpos( $myString, "xyz" ));                    // Displays '' (false)
-echo !strpos( $myString, "Hel" ) ? "Not found <br/>" : TRUE;  // Displays 'Not found'
-echo strpos( $myString, "o" ) . "<br />";                     // Displays '4'
-echo strrpos( $myString, "o" ) . "<br />";                    // Displays '8'
+echo strstr( $myString, "wor", true ) . "<br/>";                                            // Displays 'Hello,'
+echo strpos( $myString, "wor" ) . "<br/>";                                                  // Displays '7'
+echo var_dump(strpos( $myString, "xyz" ));                                                  // Displays '' (false)
+echo !strpos( $myString, "Hel" ) ? "Not found <br/>" : TRUE;                                // Displays 'Not found'
+echo strpos( $myString, "o" ) . "<br />";                                                   // Displays '4'
+echo strrpos( $myString, "o" ) . "<br />";                                                  // Displays '8'
 
 $pos = 0;
 while(($pos = strpos($myString, "l", $pos)) !== FALSE){
@@ -56,6 +56,15 @@ while(($pos = strpos($myString, "l", $pos)) !== FALSE){
     $pos++;
     
 }
+
+echo "<hr>";
+
+# Replacing
+$myString .= " The beautiful world!";
+echo str_replace("world", "country", $myString). "<br/>";
+echo str_replace("world", "country", $myString, $num). "<br/>";
+echo "O texto foi subscrito $num <br/>";
+echo substr_replace($myString, " country", 5);
 
 echo "<hr>";
 
