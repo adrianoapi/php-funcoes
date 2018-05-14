@@ -20,34 +20,32 @@
 
 
 # substr
-$myString = "Hello, world!";
-echo substr( $myString, 0, 5   ) . "<br/>"; // Displays 'Hello'
-echo substr( $myString, 0, -5  ) . "<br/>"; // Displays 'Hello, w'
-echo substr( $myString, 7      ) . "<br/>"; // Displays 'world!'
-echo substr( $myString, -1     ) . "<br/>"; // Displays '!'
-echo substr( $myString, -5, -1 ) . "<br/>"; // Displays 'orld'
+$myString = "Hello, world! The beautiful world.";
+echo substr( $myString, 0, 5   ) . "<br/>";                                             // Displays 'Hello'
+echo substr( $myString, 0, -21 ) . "<br/>";                                             // Displays 'Hello, world!'
+echo substr( $myString, 7      ) . "<br/>";                                             // Displays 'world! The beautiful world.'
+echo substr( $myString, -1     ) . "<br/>";                                             // Displays '.'
+echo substr( $myString, -5, -1 ) . "<br/>";                                             // Displays 'orld'
 
 echo "<hr>";
 
-$myString = "Hello, world!";
-echo $myString[0 ] . "<br/>"; // Displays 'H'
-echo $myString[7 ] . "<br/>"; // Displays 'w'
-     $myString[12] = '?'    ; // Substring ! => ?
-echo $myString . "<br/>"    ; // Displays 'Hello, world?'
+echo $myString[0 ] . "<br/>";                                                           // Displays 'H'
+echo $myString[7 ] . "<br/>";                                                           // Displays 'w'
+     $myString[33] = '?'    ;                                                           // Substring . => ?
+echo $myString . "<br/>"    ;                                                           // Displays 'Hello, world! The beautiful world?'
 
 echo "<hr>";
 
 # 5.2  Searching Strings
-$myString = "Hello, world!";
-echo strstr( $myString, "wor" ) . "<br/>";                                                  // Displays 'world!'
-echo ( strstr( $myString, "xtz" ) ? "Yes" : "No" ) . "<br/>";                               // Displays 'No'
+echo strstr( $myString, "wor" ) . "<br/>";                                              // Displays 'world! The beautiful world?'
+echo ( strstr( $myString, "xtz" ) ? "Yes" : "No" ) . "<br/>";                           // Displays 'No'
 # Returns the portion from the start of the string to the character before the found text:
-echo strstr( $myString, "wor", true ) . "<br/>";                                            // Displays 'Hello,'
-echo strpos( $myString, "wor" ) . "<br/>";                                                  // Displays '7'
-echo var_dump(strpos( $myString, "xyz" ));                                                  // Displays '' (false)
-echo !strpos( $myString, "Hel" ) ? "Not found <br/>" : TRUE;                                // Displays 'Not found'
-echo strpos( $myString, "o" ) . "<br />";                                                   // Displays '4'
-echo strrpos( $myString, "o" ) . "<br />";                                                  // Displays '8'
+echo strstr( $myString, "wor", true ) . "<br/>";                                        // Displays 'Hello,'
+echo strpos( $myString, "wor" ) . "<br/>";                                              // Displays '7'
+echo var_dump(strpos( $myString, "xyz" )). "<br/>";                                     // Displays '' (false)
+echo !strpos( $myString, "Hel" ) ? "Not found <br/>" : TRUE;                            // Displays 'Not found'
+echo strpos( $myString, "o" ) . "<br />";                                               // Displays '4'
+echo strrpos( $myString, "o" ) . "<br />";                                              // Displays '29'
 
 $pos = 0;
 while(($pos = strpos($myString, "l", $pos)) !== FALSE){
@@ -60,11 +58,12 @@ while(($pos = strpos($myString, "l", $pos)) !== FALSE){
 echo "<hr>";
 
 # Replacing
-$myString .= " The beautiful world!";
-echo str_replace("world", "country", $myString). "<br/>";
-echo str_replace("world", "country", $myString, $num). "<br/>";
-echo "O texto foi subscrito $num <br/>";
-echo substr_replace($myString, " country", 5);
+echo str_replace("world", "country", $myString). "<br/>";                               // Hello, country! The beautiful country?
+     str_replace("world", "country", $myString, $num). "<br/>"; 
+echo "O texto foi subscrito $num <br/>";                                                // O texto foi subscrito 2
+echo substr_replace($myString, " country", 5). "<br/>";                                 // Hello country
+echo substr_replace($myString, "country", 7, 10). "<br/>";                              // Hello, country beautiful world?
+echo substr_replace($myString, "country", 7, -7). "<br/>";                              // Hello, country world?
 
 echo "<hr>";
 
