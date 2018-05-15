@@ -8,15 +8,15 @@
 
 class Explode{
     
-    private $parameter;
+    private $delimiter;
     private $string;
     private $array;
     
     public function __construct() {}
     
-    public function setParameter($char)
+    public function setDelimiter($char)
     {
-        $this->parameter = $char;
+        $this->delimiter = $char;
     }
     
     public function setString($string)
@@ -34,7 +34,7 @@ class Explode{
         $_arr = NULL;
         for( $i = 0; $i < $this->_strlen(); $i++)
         {
-            if($this->string[$i] == $this->parameter)
+            if($this->string[$i] == $this->delimiter)
             {
                 $_arr[] = $_str;
                 $_str   = NULL;
@@ -83,7 +83,7 @@ class Explode{
 $myString = "Hello, world! The beautiful world.";
 
 $obj = new Explode();
-$obj->setParameter(" ");
+$obj->setDelimiter(" ");
 $obj->setString($myString);
 print_r($obj->getResult());
  
