@@ -44,8 +44,27 @@ END_TEXT;
           $j++;
       }
   }
-   
+  
+/*-----------------------------------------------------------------------------  
+# Depois de afirmar que o acordo era "o acordo 
+# de não proliferação mais forte já negociado" 
+# num discurso de 5 de agosto de 2015, Obama 
+# afirmou: "A proibição do Irã ter uma arma 
+# nuclear é permanente." Mas em 2025, o Irã 
+# já poderia usar centrífugas avançadas para 
+# enriquecer urânio, o que provocou críticas 
+# até mesmo de colegas democratas. O líder 
+# da minoria do Senado, Chuck Schumer (D-N.Y.), 
+# declarou em 6 de agosto de 2015 que "o acordo 
+# permitiria que o Irã, após 10 a 15 anos, 
+# estivesse às vésperas de ser um Estado nuclear 
+# e com a bênção da comunidade mundial. O Irã 
+# teria a luz verde para estar tão perto, ou 
+# ainda mais perto, de possuir uma arma nuclear 
+# do que está hoje.
+------------------------------------------------------------------------------*/  
   echo "<pre>".utf8_encode($_text)."</pre>";
+  
   ?>
   
     </body>
