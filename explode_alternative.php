@@ -44,7 +44,7 @@ class Explode{
         }
         
         # Checa se sobrou algo na string
-        if(isset($_str)){
+        if($this->_isset($_str)){
             $_arr[] = $_str;
         }
         
