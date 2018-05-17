@@ -85,3 +85,41 @@ $myString = <<<END_TEXT
 "'I am a $religion,' he cries - and then - 'I fear the Lord the God of Heaven who hath made the sea and the dry land!'"
 END_TEXT;
 echo "<pre>$myString</pre>";
+
+echo "<hr>";
+
+/*
++----------------+----------------------------------------------------------------------------------------+
+| Type Specifier | Meaning                                                                                |
++----------------+----------------------------------------------------------------------------------------+
+| b              | Treat the argument as an integer and format it as a binary number.                     |
++----------------+----------------------------------------------------------------------------------------+
+| c              | Treat the argument as an integer and format it as a character with that ASCII value.   |
++----------------+----------------------------------------------------------------------------------------+
+| d              | Treat the argument as an integer and format it as a signed decimal number.             |
++----------------+----------------------------------------------------------------------------------------+
+| e              | Format the argument in scientific notation (for example, 3.45e+2).                     |
++----------------+----------------------------------------------------------------------------------------+
+| f              | Format the argument as a floating-point number, taking into account the current locale |
+|                | settings (for example, many European locales use a comma for the decimal point,        |
+|                | rather than a period).                                                                 |
++----------------+----------------------------------------------------------------------------------------+
+| F              | Format the argument as a floating-point number, ignoring the locale settings.          |
++----------------+----------------------------------------------------------------------------------------+
+| o              | Treat the argument as an integer and format it as an octal number.                     |
++----------------+----------------------------------------------------------------------------------------+
+| s              | Format the argument as a string.                                                       |
++----------------+----------------------------------------------------------------------------------------+
+| u              | Treat the argument as an integer and format it as an unsigned decimal number.          |
++----------------+----------------------------------------------------------------------------------------+
+| x              | Treat the argument as an integer and format it as a lowercase hexadecimal number.      |
++----------------+----------------------------------------------------------------------------------------+
+| X              | Treat the argument as an integer and format it as an uppercase hexadecimal number.     |
++----------------+----------------------------------------------------------------------------------------+
+| %              | Display a literal percent (% ) symbol. This doesn't require an argument.               |
++----------------+----------------------------------------------------------------------------------------+
+ */
+
+printf("Retorna Pi arredondado: %d", M_PI);
+echo "<br>";
+printf("%d times %d is %d.", 2, 3, 2*3);
