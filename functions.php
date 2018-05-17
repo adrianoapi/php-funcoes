@@ -88,6 +88,7 @@ echo "<pre>$myString</pre>";
 
 echo "<hr>";
 
+# printf — Mostra uma string formatada
 /*
 +----------------+----------------------------------------------------------------------------------------+
 | Type Specifier | Meaning                                                                                |
@@ -121,5 +122,25 @@ echo "<hr>";
  */
 
 printf("Retorna Pi arredondado: %d", M_PI);
-echo "<br>";
-printf("%d times %d is %d.", 2, 3, 2*3);
+//echo "<br>";
+//printf("%d times %d is ".var_dump("%s"), 2, 3, 2*3);
+//echo "<br>";
+//printf("%d times %d is %F", 2, 3, 2*3);
+echo "<br/><br/>";
+
+$myNumber = 123.45;
+printf( "Binary: %b<br/>",           $myNumber );
+printf( "Character: %c<br/>",        $myNumber );
+printf( "Decimal: %d<br/>",          $myNumber );
+printf( "Scientific: %e<br/>",       $myNumber );
+printf( "Float: %f<br/>",            $myNumber );
+printf( "Octal: %o<br/>",            $myNumber );
+printf( "String: %s<br/>",           $myNumber );
+printf( "Hex (lower case): %x<br/>", $myNumber );
+printf( "Hex (upper case): %X<br/>", $myNumber );
+
+# Specifying Signs
+printf( "%d<br/>",   123 );   // Displays "123"
+printf( "%d<br/>",  -123 );   // Displays "-123"
+printf( "%+d<br/>",  123 );   // Displays "+123"
+printf( "%+d<br/>", -123 );   // Displays "-123"
