@@ -136,15 +136,15 @@ printf( "Hex (lower case): %x<br/>", $myNumber );
 printf( "Hex (upper case): %X<br/>", $myNumber );
 
 # Specifying Signs
-printf( "%d<br/>",   123 );   // Displays "123"
-printf( "%d<br/>",  -123 );   // Displays "-123"
-printf( "%+d<br/>",  123 );   // Displays "+123"
-printf( "%+d<br/>", -123 );   // Displays "-123"
+printf( "%d<br/>",   123 );                                                             // Displays "123"
+printf( "%d<br/>",  -123 );                                                             // Displays "-123"
+printf( "%+d<br/>",  123 );                                                             // Displays "+123"
+printf( "%+d<br/>", -123 );                                                             // Displays "-123"
 
 # Padding the Output
-printf( "%06d<br/>", 123    );   // Displays "000123"
-printf( "%06d<br/>", 4567   );   // Displays "004567"
-printf( "%06d<br/>", 123456 );   // Displays "123456"
+printf( "%06d<br/>", 123    );                                                          // Displays "000123"
+printf( "%06d<br/>", 4567   );                                                          // Displays "004567"
+printf( "%06d<br/>", 123456 );                                                          // Displays "123456"
 
 print "<pre>";
 printf( "%15s\n",    "Hi"            );
@@ -156,17 +156,17 @@ print "</pre>";
 
 # Specifying Number Precision
 print "<pre>";
-printf( "%f\n",    123.4567 );      // Displays "123.456700" (default precision)
-printf( "%.2f\n",  123.4567 );      // Displays "123.46"
-printf( "%.0f\n",  123.4567 );      // Displays "123"
-printf( "%.10f\n", 123.4567 );      // Displays "123.4567000000"
+printf( "%f\n",    123.4567 );                                                          // Displays "123.456700" (default precision)
+printf( "%.2f\n",  123.4567 );                                                          // Displays "123.46"
+printf( "%.0f\n",  123.4567 );                                                          // Displays "123"
+printf( "%.10f\n", 123.4567 );                                                          // Displays "123.4567000000"
 print "</pre>";
 
 echo "<pre>";
-printf( "%.2f\n",    123.4567     );    // Displays "123.46"
-printf( "%012.2f\n", 123.4567     );    // Displays "000000123.46"
-printf( "%12.4f\n",  123.4567     );    // Displays "    123.4567"
-printf( "%.8s\n", "Hello, world!" );    // Displays "Hello, w"
+printf( "%.2f\n",    123.4567     );                                                    // Displays "123.46"
+printf( "%012.2f\n", 123.4567     );                                                    // Displays "000000123.46"
+printf( "%12.4f\n",  123.4567     );                                                    // Displays "    123.4567"
+printf( "%.8s\n", "Hello, world!" );                                                    // Displays "Hello, w"
 echo "</pre>";
 
 
@@ -186,10 +186,9 @@ printf( file_get_contents( "template.txt" ), $totalMessages, $mailbox, $unreadMe
 | rtrim() | removes white space only from the end of a string          |
 +---------+-----------------------------------------------------------*/
 
-
 $myString = "   What a lot of space!     ";
 echo "<pre>";
-echo "|" . trim ( $myString ) . "|\n";        // Displays "|What a lot of space!|"
-echo "|" . ltrim( $myString ) . "|\n";        // Displays "|What a lot of space!    |";
-echo "|" . rtrim( $myString ) . "|\n";        // Displays "|   What a lot of space!|";
+echo "|" . trim ( $myString ) . "|\n";                                                  // Displays "|What a lot of space!|"
+echo "|" . ltrim( $myString ) . "|\n";                                                  // Displays "|What a lot of space!    |";
+echo "|" . rtrim( $myString ) . "|\n";                                                  // Displays "|   What a lot of space!|";
 echo "</pre>";
