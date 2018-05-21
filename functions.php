@@ -89,8 +89,7 @@ echo "<pre>$myString</pre>";
 echo "<hr>";
 
 # printf — Mostra uma string formatada
-/*
-+----------------+----------------------------------------------------------------------------------------+
+/*---------------+----------------------------------------------------------------------------------------+
 | Type Specifier | Meaning                                                                                |
 +----------------+----------------------------------------------------------------------------------------+
 | b              | Treat the argument as an integer and format it as a binary number.                     |
@@ -118,8 +117,7 @@ echo "<hr>";
 | X              | Treat the argument as an integer and format it as an uppercase hexadecimal number.     |
 +----------------+----------------------------------------------------------------------------------------+
 | %              | Display a literal percent (% ) symbol. This doesn't require an argument.               |
-+----------------+----------------------------------------------------------------------------------------+
- */
++----------------+---------------------------------------------------------------------------------------*/
 
 printf("Retorna Pi arredondado: %d", M_PI);
 //echo "<br>";
@@ -178,3 +176,22 @@ $mailbox = "Inbox";
 $totalMessages = 36;
 $unreadMessages = 4;
 printf( file_get_contents( "template.txt" ), $totalMessages, $mailbox, $unreadMessages );
+
+
+/*---------------------------------------------------------------------+
+| Trimming Strings                                                     |
++----------------------------------------------------------------------+
+| trim()  | removes white space from the beginning and end of a string |
++---------+------------------------------------------------------------+
+| ltrim() | removes white space only from the beginning of a string    |
++---------+------------------------------------------------------------+
+| rtrim() | removes white space only from the end of a string          |
++---------+-----------------------------------------------------------*/
+
+
+$myString = "   What a lot of space!     ";
+echo "<pre>";
+echo "|" . trim( $myString ) . "|\n";         // Displays "|What a lot of space!|"
+echo "|" . ltrim( $myString ) . "|\n";        // Displays "|What a lot of space!    |";
+echo "|" . rtrim( $myString ) . "|\n";        // Displays "|   What a lot of space!|";
+echo "</pre>";
