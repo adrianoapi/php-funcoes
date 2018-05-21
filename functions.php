@@ -172,3 +172,9 @@ printf( "%012.2f\n", 123.4567     );    // Displays "000000123.46"
 printf( "%12.4f\n",  123.4567     );    // Displays "    123.4567"
 printf( "%.8s\n", "Hello, world!" );    // Displays "Hello, w"
 echo "</pre>";
+
+
+$mailbox = "Inbox";
+$totalMessages = 36;
+$unreadMessages = 4;
+printf( file_get_contents( "template.txt" ), $totalMessages, $mailbox, $unreadMessages );
