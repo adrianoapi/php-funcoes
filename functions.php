@@ -37,8 +37,7 @@ echo $myString . "<br/>"    ;                                                   
 echo "<hr>";
 
 # 5.2  Searching Strings
-/*
-+---------------+-----------------------------+
+/*--------------+-----------------------------+
 | Function      | Case-Insensitive Equivalent |
 +---------------+-----------------------------+
 | strstr()      | stristr()                   |
@@ -48,8 +47,7 @@ echo "<hr>";
 | strrpos()     | strripos()                  |
 +---------------+-----------------------------+
 | str_replace() | str_ireplace()              |
-+---------------+-----------------------------+
-*/
++---------------+----------------------------*/
 echo strstr( $myString, "wor" ) . "<br/>";                                              // Displays 'world! The beautiful world?'
 echo ( strstr( $myString, "xtz" ) ? "Yes" : "No" ) . "<br/>";                           // Displays 'No'
 # Returns the portion from the start of the string to the character before the found text:
@@ -191,7 +189,7 @@ printf( file_get_contents( "template.txt" ), $totalMessages, $mailbox, $unreadMe
 
 $myString = "   What a lot of space!     ";
 echo "<pre>";
-echo "|" . trim( $myString ) . "|\n";         // Displays "|What a lot of space!|"
+echo "|" . trim ( $myString ) . "|\n";        // Displays "|What a lot of space!|"
 echo "|" . ltrim( $myString ) . "|\n";        // Displays "|What a lot of space!    |";
 echo "|" . rtrim( $myString ) . "|\n";        // Displays "|   What a lot of space!|";
 echo "</pre>";
