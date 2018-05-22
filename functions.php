@@ -74,7 +74,7 @@ echo $newtext;
 
 echo "<hr>";
 
-echo str_word_count($text);
+echo str_word_count($text);                                                     // Displays '9'
 
 echo "<hr>";
 
