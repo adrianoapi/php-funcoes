@@ -48,15 +48,15 @@ echo "<hr>";
 +---------------+-----------------------------+
 | str_replace() | str_ireplace()              |
 +---------------+----------------------------*/
-echo strstr( $myString, "wor" ) . "<br/>";                                      // Displays 'world! The beautiful world?'
+echo strstr  ( $myString, "wor" ) . "<br/>";                                    // Displays 'world! The beautiful world?'
 echo ( strstr( $myString, "xtz" ) ? "Yes" : "No" ) . "<br/>";                   // Displays 'No'
 # Returns the portion from the start of the string to the character before the found text:
-echo strstr( $myString, "wor", true ) . "<br/>";                                // Displays 'Hello,'
-echo strpos( $myString, "wor" ) . "<br/>";                                      // Displays '7'
+echo strstr  ( $myString, "wor", true ) . "<br/>";                              // Displays 'Hello,'
+echo strpos  ( $myString, "wor" ) . "<br/>";                                    // Displays '7'
 echo var_dump(strpos( $myString, "xyz" )). "<br/>";                             // Displays '' (false)
-echo !strpos( $myString, "Hel" ) ? "Not found <br/>" : TRUE;                    // Displays 'Not found'
-echo strpos( $myString, "o" ) . "<br />";                                       // Displays '4'
-echo strrpos( $myString, "o" ) . "<br />";                                      // Displays '29'
+echo !strpos ( $myString, "Hel" ) ? "Not found <br/>" : TRUE;                   // Displays 'Not found'
+echo strpos  ( $myString, "o" ) . "<br />";                                     // Displays '4'
+echo strrpos ( $myString, "o" ) . "<br />";                                     // Displays '29'
 
 $pos = 0;
 while(($pos = strpos($myString, "l", $pos)) !== FALSE){
@@ -71,6 +71,10 @@ echo "<hr>";
 $text = "The quick brown fox jumped over the lazy dog.";
 $newtext = wordwrap($text, 20, "<br />\n");
 echo $newtext;
+
+echo "<hr>";
+
+echo str_word_count($text);
 
 echo "<hr>";
 
