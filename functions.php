@@ -82,6 +82,11 @@ echo strtr("Hilla Warld","ia","eo");                                            
 
 echo "<hr>";
 
+# Search a string for "world", and return all characters from this position to the end of the string:
+echo strrchr("Hello world!","world");                                           // world!
+
+echo "<hr>";
+
 $str = "abcdabcdabdc"; 
 echo substr_count($str,"abc");                                                  // Displays '2'
 
