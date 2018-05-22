@@ -21,18 +21,18 @@
 
 # substr
 $myString = "Hello, world! The beautiful world.";
-echo substr( $myString, 0, 5   ) . "<br/>";                                             // Displays 'Hello'
-echo substr( $myString, 0, -21 ) . "<br/>";                                             // Displays 'Hello, world!'
-echo substr( $myString, 7      ) . "<br/>";                                             // Displays 'world! The beautiful world.'
-echo substr( $myString, -1     ) . "<br/>";                                             // Displays '.'
-echo substr( $myString, -5, -1 ) . "<br/>";                                             // Displays 'orld'
+echo substr( $myString, 0, 5   ) . "<br/>";                                     // Displays 'Hello'
+echo substr( $myString, 0, -21 ) . "<br/>";                                     // Displays 'Hello, world!'
+echo substr( $myString, 7      ) . "<br/>";                                     // Displays 'world! The beautiful world.'
+echo substr( $myString, -1     ) . "<br/>";                                     // Displays '.'
+echo substr( $myString, -5, -1 ) . "<br/>";                                     // Displays 'orld'
 
 echo "<hr>";
 
-echo $myString[0 ] . "<br/>";                                                           // Displays 'H'
-echo $myString[7 ] . "<br/>";                                                           // Displays 'w'
-     $myString[33] = '?'    ;                                                           // Substring . => ?
-echo $myString . "<br/>"    ;                                                           // Displays 'Hello, world! The beautiful world?'
+echo $myString[0 ] . "<br/>";                                                   // Displays 'H'
+echo $myString[7 ] . "<br/>";                                                   // Displays 'w'
+     $myString[33] = '?'    ;                                                   // Substring . => ?
+echo $myString . "<br/>"    ;                                                   // Displays 'Hello, world! The beautiful world?'
 
 echo "<hr>";
 
@@ -48,15 +48,15 @@ echo "<hr>";
 +---------------+-----------------------------+
 | str_replace() | str_ireplace()              |
 +---------------+----------------------------*/
-echo strstr( $myString, "wor" ) . "<br/>";                                              // Displays 'world! The beautiful world?'
-echo ( strstr( $myString, "xtz" ) ? "Yes" : "No" ) . "<br/>";                           // Displays 'No'
+echo strstr( $myString, "wor" ) . "<br/>";                                      // Displays 'world! The beautiful world?'
+echo ( strstr( $myString, "xtz" ) ? "Yes" : "No" ) . "<br/>";                   // Displays 'No'
 # Returns the portion from the start of the string to the character before the found text:
-echo strstr( $myString, "wor", true ) . "<br/>";                                        // Displays 'Hello,'
-echo strpos( $myString, "wor" ) . "<br/>";                                              // Displays '7'
-echo var_dump(strpos( $myString, "xyz" )). "<br/>";                                     // Displays '' (false)
-echo !strpos( $myString, "Hel" ) ? "Not found <br/>" : TRUE;                            // Displays 'Not found'
-echo strpos( $myString, "o" ) . "<br />";                                               // Displays '4'
-echo strrpos( $myString, "o" ) . "<br />";                                              // Displays '29'
+echo strstr( $myString, "wor", true ) . "<br/>";                                // Displays 'Hello,'
+echo strpos( $myString, "wor" ) . "<br/>";                                      // Displays '7'
+echo var_dump(strpos( $myString, "xyz" )). "<br/>";                             // Displays '' (false)
+echo !strpos( $myString, "Hel" ) ? "Not found <br/>" : TRUE;                    // Displays 'Not found'
+echo strpos( $myString, "o" ) . "<br />";                                       // Displays '4'
+echo strrpos( $myString, "o" ) . "<br />";                                      // Displays '29'
 
 $pos = 0;
 while(($pos = strpos($myString, "l", $pos)) !== FALSE){
@@ -75,17 +75,17 @@ echo $newtext;
 echo "<hr>";
 
 $str = "abcdabcdabdc"; 
-echo substr_count($str,"abc");
+echo substr_count($str,"abc");                                                  // Displays '2'
 
 echo "<hr>";
 
 # Replacing
-echo str_replace("world", "country", $myString). "<br/>";                               // Hello, country! The beautiful country?
+echo str_replace("world", "country", $myString). "<br/>";                       // Hello, country! The beautiful country?
      str_replace("world", "country", $myString, $num). "<br/>"; 
-echo "O texto foi subscrito $num <br/>";                                                // O texto foi subscrito 2
-echo substr_replace($myString, " country", 5). "<br/>";                                 // Hello country
-echo substr_replace($myString, "country", 7, 10). "<br/>";                              // Hello, country beautiful world?
-echo substr_replace($myString, "country", 7, -7). "<br/>";                              // Hello, country world?
+echo "O texto foi subscrito $num <br/>";                                        // O texto foi subscrito 2
+echo substr_replace($myString, " country", 5). "<br/>";                         // Hello country
+echo substr_replace($myString, "country", 7, 10). "<br/>";                      // Hello, country beautiful world?
+echo substr_replace($myString, "country", 7, -7). "<br/>";                      // Hello, country world?
 
 echo "<hr>";
 
@@ -147,37 +147,37 @@ printf( "Hex (lower case): %x<br/>", $myNumber );
 printf( "Hex (upper case): %X<br/>", $myNumber );
 
 # Specifying Signs
-printf( "%d<br/>",   123 );                                                             // Displays "123"
-printf( "%d<br/>",  -123 );                                                             // Displays "-123"
-printf( "%+d<br/>",  123 );                                                             // Displays "+123"
-printf( "%+d<br/>", -123 );                                                             // Displays "-123"
+printf( "%d<br/>",   123 );                                                     // Displays "123"
+printf( "%d<br/>",  -123 );                                                     // Displays "-123"
+printf( "%+d<br/>",  123 );                                                     // Displays "+123"
+printf( "%+d<br/>", -123 );                                                     // Displays "-123"
 
 # Padding the Output
-printf( "%06d<br/>", 123    );                                                          // Displays "000123"
-printf( "%06d<br/>", 4567   );                                                          // Displays "004567"
-printf( "%06d<br/>", 123456 );                                                          // Displays "123456"
+printf( "%06d<br/>", 123    );                                                  // Displays "000123"
+printf( "%06d<br/>", 4567   );                                                  // Displays "004567"
+printf( "%06d<br/>", 123456 );                                                  // Displays "123456"
 
 print "<pre>";
 printf( "%15s\n",    "Hi"            );
 printf( "%15s\n",    "Hello"         );
 printf( "%15s\n",    "Hello, world!" );
-printf( "%'#15s\n",  "Hi"            );   // Displays #############"Hi"
-printf( "%'#-15s\n", "Hi"            );   // Displays "Hi#############"
+printf( "%'#15s\n",  "Hi"            );                                         // Displays #############"Hi"
+printf( "%'#-15s\n", "Hi"            );                                         // Displays "Hi#############"
 print "</pre>";
 
 # Specifying Number Precision
 print "<pre>";
-printf( "%f\n",    123.4567 );                                                          // Displays "123.456700" (default precision)
-printf( "%.2f\n",  123.4567 );                                                          // Displays "123.46"
-printf( "%.0f\n",  123.4567 );                                                          // Displays "123"
-printf( "%.10f\n", 123.4567 );                                                          // Displays "123.4567000000"
+printf( "%f\n",    123.4567 );                                                  // Displays "123.456700" (default precision)
+printf( "%.2f\n",  123.4567 );                                                  // Displays "123.46"
+printf( "%.0f\n",  123.4567 );                                                  // Displays "123"
+printf( "%.10f\n", 123.4567 );                                                  // Displays "123.4567000000"
 print "</pre>";
 
 echo "<pre>";
-printf( "%.2f\n",    123.4567     );                                                    // Displays "123.46"
-printf( "%012.2f\n", 123.4567     );                                                    // Displays "000000123.46"
-printf( "%12.4f\n",  123.4567     );                                                    // Displays "    123.4567"
-printf( "%.8s\n", "Hello, world!" );                                                    // Displays "Hello, w"
+printf( "%.2f\n",    123.4567     );                                            // Displays "123.46"
+printf( "%012.2f\n", 123.4567     );                                            // Displays "000000123.46"
+printf( "%12.4f\n",  123.4567     );                                            // Displays "    123.4567"
+printf( "%.8s\n", "Hello, world!" );                                            // Displays "Hello, w"
 echo "</pre>";
 
 
@@ -199,7 +199,7 @@ printf( file_get_contents( "template.txt" ), $totalMessages, $mailbox, $unreadMe
 
 $myString = "   What a lot of space!     ";
 echo "<pre>";
-echo "|" . trim ( $myString ) . "|\n";                                                  // Displays "|What a lot of space!|"
-echo "|" . ltrim( $myString ) . "|\n";                                                  // Displays "|What a lot of space!    |";
-echo "|" . rtrim( $myString ) . "|\n";                                                  // Displays "|   What a lot of space!|";
+echo "|" . trim ( $myString ) . "|\n";                                          // Displays "|What a lot of space!|"
+echo "|" . ltrim( $myString ) . "|\n";                                          // Displays "|What a lot of space!    |";
+echo "|" . rtrim( $myString ) . "|\n";                                          // Displays "|   What a lot of space!|";
 echo "</pre>";
