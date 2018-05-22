@@ -78,6 +78,10 @@ echo str_word_count($text);                                                     
 
 echo "<hr>";
 
+echo strtr("Hilla Warld","ia","eo");                                            // Hello World
+
+echo "<hr>";
+
 $str = "abcdabcdabdc"; 
 echo substr_count($str,"abc");                                                  // Displays '2'
 
