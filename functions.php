@@ -68,6 +68,17 @@ while(($pos = strpos($myString, "l", $pos)) !== FALSE){
 
 echo "<hr>";
 
+$text = "The quick brown fox jumped over the lazy dog.";
+$newtext = wordwrap($text, 20, "<br />\n");
+echo $newtext;
+
+echo "<hr>";
+
+$str = "abcdabcdabdc"; 
+echo substr_count($str,"abc");
+
+echo "<hr>";
+
 # Replacing
 echo str_replace("world", "country", $myString). "<br/>";                               // Hello, country! The beautiful country?
      str_replace("world", "country", $myString, $num). "<br/>"; 
