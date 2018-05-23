@@ -88,7 +88,17 @@ echo strrchr("Hello world!","world");                                           
 echo "<hr>";
 
 $str = "abcdabcdabdc"; 
-echo substr_count($str,"abc");                                                  // Displays '2'
+echo substr_count($str,"abc")."<br />";           
+$myString = "I say, nay, nay, and thrice nay!";
+echo strlen($myString)."<br>";
+echo substr_count( $myString, "nay", 9    ) . "<br />";                         // Displays '2'
+echo substr_count( $myString, "nay", 9, 6 ) . "<br />";                         // Displays '1'
+$str = "This is nice";
+echo strlen($str)."<br>";                                                       // Using strlen() to return the string length
+echo substr_count($str,"is"    ) . "<br/>";                                     // The number of times "is" occurs in the string
+echo substr_count($str,"is",2  ) . "<br/>";                                     // The string is now reduced to "is is nice"
+echo substr_count($str,"is",3  ) . "<br/>";                                     // The string is now reduced to "s is nice"
+echo substr_count($str,"is",3,3) . "<br/>";                                     // The string is now reduced to "s i"
 
 echo "<hr>";
 
