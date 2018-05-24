@@ -36,3 +36,18 @@ echo $a | $b;
 // & 00000001
 //-----------
 //   00000111 => 5 DECIMAL
+
+/*
+ * Operador ^ ( Bitwise XOR )
+ * O operador ^ ( Bitwise XOR ) compara dois valores utilizando suas representações binárias, 
+ * retornando um novo valor, para formar esse valor de retorno cada bit é comparado, retornando 1( true ) 
+ * quando os bits comparados forem diferentes, caso contrário retorna 0( false ).
+ */
+
+echo "<hr>";
+
+echo $a ^ $b;
+//   00000101
+// & 00000001
+//-----------
+//   00000100 => 4 DECIMAL
