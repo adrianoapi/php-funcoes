@@ -51,3 +51,23 @@ echo $a ^ $b;
 // & 00000001
 //-----------
 //   00000100 => 4 DECIMAL
+
+echo "<hr>";
+
+/*
+ * Operador ~ ( Bitwise NOT )
+ * O operador ~ ( Bitwise NOT ) diferente dos operadores anteriores, é um operador que afeta apenas um 
+ * operando, incrementando(++) e invertendo seu sinal, de positivo para negativo e vice versa.
+ */
+
+$a = -2;
+// 11111111111111111111111111111110
+$a = ~$a;
+// 00000000000000000000000000000001 => 1 DECIMAL
+echo $a . "<br/>";
+$b = 2;
+// 00000000000000000000000000000010
+$b = ~$b;
+// 11111111111111111111111111111101
+var_dump($b);
+
