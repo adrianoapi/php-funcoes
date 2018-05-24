@@ -4,6 +4,7 @@
 # PHP FUNCTIONS
 # -----------------------------------------------------------------------------
 # Bitwise
+# Reference: http://www.diogomatheus.com.br/blog/php/operadores-bitwise-bit-a-bit/
 ------------------------------------------------------------------------------*/
 
 /*
