@@ -22,4 +22,17 @@ echo $a & $b;
 //-----------
 //   00000001 => 1 DECIMAL
 
+echo "<hr>";
 
+/*
+ * Operador | ( Bitwise OR )
+ * O operador | ( Bitwise OR ) compara dois valores utilizando suas representações binárias, retornando 
+ * um novo valor, para formar esse valor de retorno cada bit é comparado, [retornando 1( true ) se um dos 
+ * bits comparados forem iguais a 1( true )], caso contrário retorna 0 ( false ).
+ */
+
+echo $a | $b;
+//   00000101
+// & 00000001
+//-----------
+//   00000111 => 5 DECIMAL
