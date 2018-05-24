@@ -85,3 +85,17 @@ $a = 49;
 // 00110001
 echo $a >> 3;
 // 00000110 => 6 DECIMAL
+
+echo "<hr>";
+
+/*
+ * Operador << ( Bitwise left shift )
+ * O operador << ( deslocamento de bits para a esquerda ) segue a mesma linha de raciocínio do 
+ * operador >>, mas ao invés de deslizar os bits para a direita, desliza os bits para a esquerda, cada 
+ * passo equivale a multiplicar por 2, ou seja, $a << 3, é o mesmo que multiplicar $a por 2 três vezes.
+ */
+
+$a = 49;
+// 00110001
+echo $a << 3;
+// 110001000 => 392 DECIMAL
