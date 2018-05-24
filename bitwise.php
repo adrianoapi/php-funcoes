@@ -71,3 +71,17 @@ $b = ~$b;
 // 11111111111111111111111111111101 => -3 DECIMAL
 echo $b;
 
+echo "<hr>";
+
+/*
+ * Operador >> ( Bitwise right shift )
+ * O operador >> ( deslocamento de bits para a direita ) olhando pela base decimal parece estranho, mas 
+ * se olharmos pela representação binária do valor iremos identificar facilmente que os bits deslizam para 
+ * direita, sendo o operando da direita responsável pelo número de vezes que os bits serão deslizados, 
+ * cada passo equivale a dividir por 2, ou seja, $a >> 3, é o mesmo que dividir $a por 2 três vezes.
+ */
+
+$a = 49;
+// 00110001
+echo $a >> 3;
+// 00000110 => 6 DECIMAL
