@@ -1,6 +1,6 @@
 <?php
 
-function debug($data)
+function debug($data, $stop = false)
 {
     echo "<pre>";
     if(is_array($data)){
@@ -9,6 +9,8 @@ function debug($data)
         echo $data;
     }
     echo "<pre>";
+    if($stop)
+        die();
 }
 
 ?>
