@@ -106,7 +106,12 @@ debug( array_slice( $fruits,  0, 3 ) );                                         
 $number = array ("4", "hello", 2);
 debug( array_sum( $number ) );                                                  // 6
 
-
-
+/*
+ * Retorna um array contendo todos os valores em array1 cujo existem em todos
+ * os parâmetros.
+ */
+$array1 = array( "a" => "verde", "vermelho", "azul"    );
+$array2 = array( "b" => "verde", "amarelo", "vermelho" );
+debug( array_intersect( $array1, $array2 ) );                                   // [a] => verde, [0] => vermelho
 
 ?>
