@@ -91,11 +91,14 @@ $number = array ( "2","3","4", "5", "6", "7", "8", "9", "10" );
 $cards  = array_merge ( $face, $number );
 debug( $cards );                                                                // [0] => A, [1] => J, [2] => Q, [3] => K, [4] => 2, [5] => 3...
 
-
+/*
+ * array_slice() retorna a sequência de elementos de um array delimitado pelos
+ * parâmetros offset e length.
+ */
 $fruits = array ("apple", "mango", "peach", "pear", "orange");
-debug( array_slice( $fruits, 2     ) );                                         // returns "peach", "pear", and "orange"
+debug( array_slice( $fruits,  2    ) );                                         // returns "peach", "pear", and "orange"
 debug( array_slice( $fruits, -2, 1 ) );                                         // returns "pear"
-debug( array_slice( $fruits, 0, 3  ) );                                         // returns "apple", "mango", and "peach"
+debug( array_slice( $fruits,  0, 3 ) );                                         // returns "apple", "mango", and "peach"
 
 
 
