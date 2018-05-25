@@ -16,13 +16,43 @@ debug  ( "\$a = $a; \$b = $b; \$c = $c \n" );                                   
 extract( $my_array, EXTR_PREFIX_SAME, 'dup' );
 debug  ( "\$a = $a; \$b = $b; \$c = $c \$dup_b = $dup_b \n" );                  // $a = Cat; $b = Dog; $c = Horse $dup_b = Dog  
 
+
+
+
+/*-----------------------------------------------------------------------------------------+
+| sort_flags                                                                              |
++-----------------------------------------------------------------------------------------+
+| SORT_REGULAR       | compara os itens normalmente (não modifica o tipo)                 |
++--------------------+--------------------------------------------------------------------+
+| SORT_NUMERIC       | compara os items numericamente                                     |
++--------------------+--------------------------------------------------------------------+
+| SORT_STRING        | compara os itens como strings                                      |
++--------------------+--------------------------------------------------------------------+
+| SORT_LOCALE_STRING | compara os itens como strings, utilizando o locale atual. Utiliza  |
+|                    | o locale que pode ser modificado com setlocale()                   |
++--------------------+--------------------------------------------------------------------+
+| SORT_NATURAL       | compara os itens como strings utilizando "ordenação natural" tipo  |
+|                    | natsort()                                                          |
++--------------------+--------------------------------------------------------------------+
+| SORT_FLAG_CASE     | pode ser combinado (bitwise OR) com SORT_STRING ou SORT_NATURAL    |
+|                    | para ordenar strings sem considerar maiúsculas e minúsculas        |
++--------------------+-------------------------------------------------------------------*/
+        
+
 /*
  * Essa função ordena um array. Os elementos serão ordenados do menor para o maior
  * ao final da execução dessa função.
  */
-$arr = array ("picture1.JPG", "picture2.jpg", "Picture10.jpg", "picture20.jpg");
+$arr = array ( "picture1.JPG", "picture2.jpg", "Picture10.jpg", "picture20.jpg" );
 sort ( $arr );
 debug( $arr );                                                                  // [0] => Picture10.jpg, [1] => picture1.JPG, [2] => picture2.jpg, [3] => picture20.jpg
+
+/*
+ * Exemplo de sort() utilizando comparações naturais ignorando maiúsculas e minúculas
+ */
+$fruits = array( "Orange1", "orange20", "orange2", "Orange3"  );
+sort ( $fruits, SORT_NATURAL | SORT_FLAG_CASE );
+debug( $fruits );
 
 /*
  * Ordena o array pelo indice
