@@ -30,5 +30,28 @@ $array = array("a1"=>'x',"a2"=>'e',"a3"=>'z');
 asort( $array );
 debug( $array );                                                                // [a2] => e, [a1] => x, [a3] => z
 
+/*
+ * retorna um array com suas relações trocadas, ou seja, as chaves de array passam
+ * a ser os valores e os valores de array passam a ser as chaves.
+ */
+$fruits = array( "mango", "apple", "pear", "peach" );
+$fruits = array_flip( $fruits );
+debug( $fruits );                                                               // [mango] => 0, [apple] => 1, [pear] => 2, [peach] => 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ?>
