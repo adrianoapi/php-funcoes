@@ -92,8 +92,10 @@ $cards  = array_merge ( $face, $number );
 debug( $cards );                                                                // [0] => A, [1] => J, [2] => Q, [3] => K, [4] => 2, [5] => 3...
 
 
-
-
+$fruits = array ("apple", "mango", "peach", "pear", "orange");
+debug( array_slice( $fruits, 2     ) );                                         // returns "peach", "pear", and "orange"
+debug( array_slice( $fruits, -2, 1 ) );                                         // returns "pear"
+debug( array_slice( $fruits, 0, 3  ) );                                         // returns "apple", "mango", and "peach"
 
 
 
