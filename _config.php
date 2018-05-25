@@ -3,9 +3,11 @@
 function debug($data)
 {
     echo "<pre>";
-    if(is_array($data))
+    if(is_array($data)){
         print_r($data);
-    echo $data;
+    }else{
+        echo $data;
+    }
     echo "<pre>";
 }
 
