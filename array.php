@@ -17,6 +17,14 @@ extract( $my_array, EXTR_PREFIX_SAME, 'dup' );
 debug  ( "\$a = $a; \$b = $b; \$c = $c \$dup_b = $dup_b \n" );                  // $a = Cat; $b = Dog; $c = Horse $dup_b = Dog  
 
 /*
+ * Essa função ordena um array. Os elementos serão ordenados do menor para o maior
+ * ao final da execução dessa função.
+ */
+$arr = array ("picture1.JPG", "picture2.jpg", "Picture10.jpg", "picture20.jpg");
+sort ( $arr );
+debug( $arr );                                                                  // [0] => Picture10.jpg, [1] => picture1.JPG, [2] => picture2.jpg, [3] => picture20.jpg
+
+/*
  * Ordena o array pelo indice
  */
 $product = array( "C"=>"Pen", "D"=>"Pencil", "A"=>"Copy", "B"=>"Book" );
