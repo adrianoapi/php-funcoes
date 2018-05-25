@@ -100,7 +100,11 @@ debug( array_slice( $fruits,  2    ) );                                         
 debug( array_slice( $fruits, -2, 1 ) );                                         // returns "pear"
 debug( array_slice( $fruits,  0, 3 ) );                                         // returns "apple", "mango", and "peach"
 
-
+/*
+ * Soma todas os valores numericos do array
+ */
+$number = array ("4", "hello", 2);
+debug( array_sum( $number ) );                                                  // 6
 
 
 
