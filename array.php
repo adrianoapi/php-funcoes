@@ -76,12 +76,14 @@ $fruits = array( "mango", "apple", "pear", "peach" );
 $fruits = array_flip( $fruits );
 debug( $fruits );                                                               // [mango] => 0, [apple] => 1, [pear] => 2, [peach] => 3
 
-
-
-
-
-
-
+/*
+ * Funde os elementos de dois ou mais arrays de forma que os elementos de um são
+ * colocados no final do array anterior. 
+ */
+$face   = array ( "A", "J", "Q", "K" );
+$number = array ( "2","3","4", "5", "6", "7", "8", "9", "10" );
+$cards  = array_merge ( $face, $number );
+debug( $cards );                                                                // [0] => A, [1] => J, [2] => Q, [3] => K, [4] => 2, [5] => 3...
 
 
 
