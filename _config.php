@@ -1,5 +1,7 @@
 <?php
 
+header("Content-type: text/html; charset=iso-8859-1"); 
+
 function debug($data, $stop = false)
 {
     echo "<pre>";
