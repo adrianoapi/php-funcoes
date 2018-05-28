@@ -9,6 +9,13 @@ require '_config.php';
 ------------------------------------------------------------------------------*/
 
 /*
+ * Funcao array_change_key_case usada para converter o indice do array para
+ * CASE_LOWER ou CASE_UPPER
+ */
+$age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+print_r(array_change_key_case($age, CASE_UPPER));
+
+/*
  * Function extract
  */
 $a = "Original";
