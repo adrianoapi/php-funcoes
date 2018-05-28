@@ -8,48 +8,79 @@ require '_config.php';
 # Exemplos de manipulacao de array's
 ------------------------------------------------------------------------------*/
 
+echo <<<END_COMMENT
 /*
  * Funcao array_change_key_case usada para converter o indice do array para
  * CASE_LOWER ou CASE_UPPER
  */
+END_COMMENT;
 $age = array( "Peter"=>"35", "Ben"=>"37", "Joe"=>"43" );
 debug( array_change_key_case( $age, CASE_UPPER ) );
 
+echo <<<END_COMMENT
 /*
  * Divide um array em size pedaços. O último pedaço pode conter menos elementos
  * que o parâmetro size.
  */
+END_COMMENT;
 $cars = array( "Volvo", "BMW", "Toyota", "Honda", "Mercedes", "Opel" );
 debug( array_chunk($cars, 2));
 
+echo <<<END_COMMENT
 /*
  * Cria um array usando um array para chaves e outro para valores 
  */
+END_COMMENT;
 $fname = array( "Peter", "Ben", "Joe" );
 $age   = array( "35", "37", "43"      );
 debug( array_combine( $fname, $age )  );                                        // [Peter] => 35, [Ben] => 37, [Joe] => 43
 
+echo <<<END_COMMENT
 /*
  * Conta todos os valores de um array
  */
+END_COMMENT;
 $a = array( "A", "Cat", "Dog", "A", "Dog" );
 debug( array_count_values( $a ) );                                              // Array ( [A] => 2 [Cat] => 1 [Dog] => 2
 
+echo <<<END_COMMENT
+/*
+ * Compara os valores do array1 com array2 e retorna a diferença
+ */
+END_COMMENT;
+$a1 = array( "a"=>"red","d"=>"yellow", "b"=>"green",  "c"=>"blue"  );
+$a2 = array( "e"=>"red", "f"=>"green", "g"=>"blue" );
+debug( array_diff( $a1, $a2 ) );                                                // [d] => yellow
+
+echo <<<END_COMMENT
+/*
+ * Preenche um array com num elementos com o valor do parâmetro value e chaves
+ * começando a partir de start_index.
+ */
+END_COMMENT;
+$a1 = array_fill( 3, 4, "blue" );                                               // [3] => blue, [4] => blue, [5] => blue, [6] => blue
+$b1 = array_fill( 0, 1, "red"  );                                               // [0] => red
+debug( $a1 );
+echo "<br>";
+debug( $b1 );
+
+echo <<<END_COMMENT
 /*
  * Function extract
  */
+END_COMMENT;
 $a = "Original";
 $my_array = array( "a" => "Cat","b" => "Dog", "c" => "Horse" );
 extract( $my_array );
 debug  ( "\$a = $a; \$b = $b; \$c = $c \n" );                                   // $a = Cat; $b = Dog; $c = Horse
 
+echo <<<END_COMMENT
 /*
  * Passando parametro EXTR_PREFIX_SAME na funcao extract
  */
+END_COMMENT;
 extract( $my_array, EXTR_PREFIX_SAME, 'dup' );
 debug  ( "\$a = $a; \$b = $b; \$c = $c \$dup_b = $dup_b \n" );                  // $a = Cat; $b = Dog; $c = Horse $dup_b = Dog  
-
-
 
 
 /*----------------------------------------------------------------------------------------+
@@ -71,72 +102,98 @@ debug  ( "\$a = $a; \$b = $b; \$c = $c \$dup_b = $dup_b \n" );                  
 |                    | para ordenar strings sem considerar maiúsculas e minúsculas        |
 +--------------------+-------------------------------------------------------------------*/
         
-
+echo <<<END_COMMENT
 /*
  * Essa função ordena um array. Os elementos serão ordenados do menor para o maior
  * ao final da execução dessa função.
  */
+END_COMMENT;
 $arr = array ( "picture1.JPG", "picture2.jpg", "Picture10.jpg", "picture20.jpg" );
 sort ( $arr );
 debug( $arr );                                                                  // [0] => Picture10.jpg, [1] => picture1.JPG, [2] => picture2.jpg, [3] => picture20.jpg
 
+echo <<<END_COMMENT
 /*
  * Exemplo de sort() utilizando comparações naturais ignorando maiúsculas e minúculas
  */
+END_COMMENT;
 $fruits = array( "Orange1", "orange20", "orange2", "Orange3"  );
 sort ( $fruits, SORT_NATURAL | SORT_FLAG_CASE );
 debug( $fruits );
 
+echo <<<END_COMMENT
 /*
  * Ordena o array pelo indice
  */
+END_COMMENT;
 $product = array( "C"=>"Pen", "D"=>"Pencil", "A"=>"Copy", "B"=>"Book" );
 ksort( $product );
 debug( $product );                                                              // [A] => Copy, [B] => Book, [C] => Pen, [D] => Pencil
 
+echo <<<END_COMMENT
 /*
- * Ordena o array pelo valor
+ * [asort] Ordena o array pelo valor
  */
-$array = array("a1"=>'x',"a2"=>'e',"a3"=>'z');
+END_COMMENT;
+$array = array( "a1"=>'x',"a2"=>'e',"a3"=>'z' );
 asort( $array );
 debug( $array );                                                                // [a2] => e, [a1] => x, [a3] => z
 
+echo <<<END_COMMENT
 /*
- * retorna um array com suas relações trocadas, ou seja, as chaves de array passam
- * a ser os valores e os valores de array passam a ser as chaves.
+ * [array_flip] Retorna um array com suas relações trocadas, ou seja, as chaves 
+ * de array passam a ser os valores e os valores de array passam a ser as chaves.
  */
+END_COMMENT;
 $fruits = array( "mango", "apple", "pear", "peach" );
 $fruits = array_flip( $fruits );
 debug( $fruits );                                                               // [mango] => 0, [apple] => 1, [pear] => 2, [peach] => 3
 
+echo <<<END_COMMENT
 /*
- * Funde os elementos de dois ou mais arrays de forma que os elementos de um são
- * colocados no final do array anterior. 
+ * [array_merge] Funde os elementos de dois ou mais arrays de forma que os elementos
+ * de um são colocados no final do array anterior. 
  */
+END_COMMENT;
 $face   = array ( "A", "J", "Q", "K" );
 $number = array ( "2","3","4", "5", "6", "7", "8", "9", "10" );
 $cards  = array_merge ( $face, $number );
 debug( $cards );                                                                // [0] => A, [1] => J, [2] => Q, [3] => K, [4] => 2, [5] => 3...
 
+echo <<<END_COMMENT
+/*
+ * [array_shift] Retira o primeiro elemento de um array
+ */
+END_COMMENT;
+$a = array( "a"=>"red", "b"=>"green", "c"=>"blue" );
+debug ( array_shift( $a ) );                                                    // red
+debug ( ( $a ) );                                                               // [b] => green, [c] => blue
+
+echo <<<END_COMMENT
 /*
  * array_slice() retorna a sequência de elementos de um array delimitado pelos
  * parâmetros offset e length.
  */
+END_COMMENT;
 $fruits = array ("apple", "mango", "peach", "pear", "orange");
 debug( array_slice( $fruits,  2    ) );                                         // returns "peach", "pear", and "orange"
 debug( array_slice( $fruits, -2, 1 ) );                                         // returns "pear"
 debug( array_slice( $fruits,  0, 3 ) );                                         // returns "apple", "mango", and "peach"
 
+echo <<<END_COMMENT
 /*
  * Soma todas os valores numericos do array
  */
+END_COMMENT;
 $number = array ("4", "hello", 2);
 debug( array_sum( $number ) );                                                  // 6
 
+echo <<<END_COMMENT
 /*
  * Retorna um array contendo todos os valores em array1 cujo existem em todos
  * os parâmetros.
  */
+END_COMMENT;
 $array1 = array( "a" => "verde", "vermelho", "azul"    );
 $array2 = array( "b" => "verde", "amarelo", "vermelho" );
 debug( array_intersect( $array1, $array2 ) );                                   // [a] => verde, [0] => vermelho
