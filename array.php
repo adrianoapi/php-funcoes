@@ -10,8 +10,8 @@ require '_config.php';
 
 echo <<<END_COMMENT
 /*
- * Funcao array_change_key_case usada para converter o indice do array para
- * CASE_LOWER ou CASE_UPPER
+ * [array_change_key_case] Funcao array_change_key_case usada para converter o 
+ * indice do array para CASE_LOWER ou CASE_UPPER
  */
 END_COMMENT;
 $age = array( "Peter"=>"35", "Ben"=>"37", "Joe"=>"43" );
@@ -19,8 +19,8 @@ debug( array_change_key_case( $age, CASE_UPPER ) );
 
 echo <<<END_COMMENT
 /*
- * Divide um array em size pedaços. O último pedaço pode conter menos elementos
- * que o parâmetro size.
+ * [array_chunk] Divide um array em size pedaços. O último pedaço pode conter menos
+ * elementos que o parâmetro size.
  */
 END_COMMENT;
 $cars = array( "Volvo", "BMW", "Toyota", "Honda", "Mercedes", "Opel" );
@@ -28,7 +28,7 @@ debug( array_chunk($cars, 2));
 
 echo <<<END_COMMENT
 /*
- * Cria um array usando um array para chaves e outro para valores 
+ * [array_combine] Cria um array usando um array para chaves e outro para valores 
  */
 END_COMMENT;
 $fname = array( "Peter", "Ben", "Joe" );
@@ -37,7 +37,7 @@ debug( array_combine( $fname, $age )  );                                        
 
 echo <<<END_COMMENT
 /*
- * Conta todos os valores de um array
+ * [array_count_values] Conta todos os valores de um array
  */
 END_COMMENT;
 $a = array( "A", "Cat", "Dog", "A", "Dog" );
@@ -45,7 +45,7 @@ debug( array_count_values( $a ) );                                              
 
 echo <<<END_COMMENT
 /*
- * Compara os valores do array1 com array2 e retorna a diferença
+ * [array_diff] Compara os valores do array1 com array2 e retorna a diferença
  */
 END_COMMENT;
 $a1 = array( "a"=>"red","d"=>"yellow", "b"=>"green",  "c"=>"blue"  );
@@ -54,8 +54,8 @@ debug( array_diff( $a1, $a2 ) );                                                
 
 echo <<<END_COMMENT
 /*
- * Preenche um array com num elementos com o valor do parâmetro value e chaves
- * começando a partir de start_index.
+ * [array_fill] Preenche um array com num elementos com o valor do parâmetro value
+ * e chaves começando a partir de start_index.
  */
 END_COMMENT;
 $a1 = array_fill( 3, 4, "blue" );                                               // [3] => blue, [4] => blue, [5] => blue, [6] => blue
@@ -63,6 +63,15 @@ $b1 = array_fill( 0, 1, "red"  );                                               
 debug( $a1 );
 echo "<br>";
 debug( $b1 );
+
+echo <<<END_COMMENT
+/*
+ * [array_pop] Remove o ultimo item do array
+ */
+END_COMMENT;
+$a = array("red", "green", "blue");
+array_pop ( $a );
+debug     ( $a );
 
 echo <<<END_COMMENT
 /*
@@ -82,6 +91,15 @@ END_COMMENT;
 extract( $my_array, EXTR_PREFIX_SAME, 'dup' );
 debug  ( "\$a = $a; \$b = $b; \$c = $c \$dup_b = $dup_b \n" );                  // $a = Cat; $b = Dog; $c = Horse $dup_b = Dog  
 
+echo <<<END_COMMENT
+/*
+ * Essa função ordena um array. Os elementos serão ordenados do menor para o maior
+ * ao final da execução dessa função.
+ */
+END_COMMENT;
+$arr = array ( "picture1.JPG", "picture2.jpg", "Picture10.jpg", "picture20.jpg" );
+sort ( $arr );
+debug( $arr );                                                                  // [0] => Picture10.jpg, [1] => picture1.JPG, [2] => picture2.jpg, [3] => picture20.jpg
 
 /*----------------------------------------------------------------------------------------+
 | sort_flags                                                                              |
@@ -102,15 +120,6 @@ debug  ( "\$a = $a; \$b = $b; \$c = $c \$dup_b = $dup_b \n" );                  
 |                    | para ordenar strings sem considerar maiúsculas e minúsculas        |
 +--------------------+-------------------------------------------------------------------*/
         
-echo <<<END_COMMENT
-/*
- * Essa função ordena um array. Os elementos serão ordenados do menor para o maior
- * ao final da execução dessa função.
- */
-END_COMMENT;
-$arr = array ( "picture1.JPG", "picture2.jpg", "Picture10.jpg", "picture20.jpg" );
-sort ( $arr );
-debug( $arr );                                                                  // [0] => Picture10.jpg, [1] => picture1.JPG, [2] => picture2.jpg, [3] => picture20.jpg
 
 echo <<<END_COMMENT
 /*
@@ -135,7 +144,7 @@ echo <<<END_COMMENT
  * [asort] Ordena o array pelo valor
  */
 END_COMMENT;
-$array = array( "a1"=>'x',"a2"=>'e',"a3"=>'z' );
+$array = array( "a1"=>'x', "a2"=>'e', "a3"=>'z' );
 asort( $array );
 debug( $array );                                                                // [a2] => e, [a1] => x, [a3] => z
 
@@ -156,7 +165,7 @@ echo <<<END_COMMENT
  */
 END_COMMENT;
 $face   = array ( "A", "J", "Q", "K" );
-$number = array ( "2","3","4", "5", "6", "7", "8", "9", "10" );
+$number = array ( "2", "3", "4", "5", "6", "7", "8", "9", "10" );
 $cards  = array_merge ( $face, $number );
 debug( $cards );                                                                // [0] => A, [1] => J, [2] => Q, [3] => K, [4] => 2, [5] => 3...
 
