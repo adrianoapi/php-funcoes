@@ -25,9 +25,15 @@ debug( array_chunk($cars, 2));
 /*
  * Cria um array usando um array para chaves e outro para valores 
  */
-$fname = array( "Peter", "Ben", "Joe");
-$age   = array( "35", "37", "43"     );
-debug( array_combine( $fname, $age ) );                                         // [Peter] => 35, [Ben] => 37, [Joe] => 43
+$fname = array( "Peter", "Ben", "Joe" );
+$age   = array( "35", "37", "43"      );
+debug( array_combine( $fname, $age )  );                                        // [Peter] => 35, [Ben] => 37, [Joe] => 43
+
+/*
+ * Conta todos os valores de um array
+ */
+$a = array( "A", "Cat", "Dog", "A", "Dog" );
+debug( array_count_values( $a ) );                                              // Array ( [A] => 2 [Cat] => 1 [Dog] => 2
 
 /*
  * Function extract
