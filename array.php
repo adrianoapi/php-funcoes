@@ -12,8 +12,22 @@ require '_config.php';
  * Funcao array_change_key_case usada para converter o indice do array para
  * CASE_LOWER ou CASE_UPPER
  */
-$age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
-print_r(array_change_key_case($age, CASE_UPPER));
+$age = array( "Peter"=>"35", "Ben"=>"37", "Joe"=>"43" );
+debug( array_change_key_case( $age, CASE_UPPER ) );
+
+/*
+ * Divide um array em size pedaços. O último pedaço pode conter menos elementos
+ * que o parâmetro size.
+ */
+$cars = array( "Volvo", "BMW", "Toyota", "Honda", "Mercedes", "Opel" );
+debug( array_chunk($cars, 2));
+
+/*
+ * Cria um array usando um array para chaves e outro para valores 
+ */
+$fname = array( "Peter", "Ben", "Joe");
+$age   = array( "35", "37", "43"     );
+debug( array_combine( $fname, $age ) );                                         // [Peter] => 35, [Ben] => 37, [Joe] => 43
 
 /*
  * Function extract
