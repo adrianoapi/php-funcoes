@@ -88,8 +88,8 @@ echo <<<END_COMMENT
  */
 END_COMMENT;
 $cars = array( "Volvo"=> array("XC60","XC90"), "BMW"=> array("X3","X5"), "Toyota"=> array("Highlander") ); 
-echo "<p>Normal count: " .    count( $cars    ) . "</p>";
-echo "<p>Recursive count: " . count( $cars, 1 ) . "</p>";
+echo "<p>Normal count: " .    count( $cars    ) . "</p>";                       // Display 3
+echo "<p>Recursive count: " . count( $cars, 1 ) . "</p>";                       // Display 8
 
 echo <<<END_COMMENT
 /*
