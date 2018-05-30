@@ -91,6 +91,11 @@ $cars = array( "Volvo"=> array("XC60","XC90"), "BMW"=> array("X3","X5"), "Toyota
 echo "<p>Normal count: " .    count( $cars    ) . "</p>";                       // Display 3
 echo "<p>Recursive count: " . count( $cars, 1 ) . "</p>";                       // Display 8
 
+$a = [1 => 'Apple', 3 => 'Cactus', 5 => 'Elderflower'] + ['Banana', 'Dragon Fruit', 'Fig'];
+debug( count( $a ) );                                                           // Display 5
+ksort($a);
+debug($a); // [0] => Banana, [1] => Apple, [2] => Fig, [3] => Cactus, [5] => Elderflower
+
 echo <<<END_COMMENT
 /*
  * [array_diff] Compara os valores do array1 com array2 e retorna a diferença
