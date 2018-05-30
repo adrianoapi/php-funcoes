@@ -10,7 +10,7 @@ function debug($data, $stop = false)
     }else{
         echo $data;
     }
-    echo "<pre>";
+    echo "</pre>";
     if($stop)
         die();
 }

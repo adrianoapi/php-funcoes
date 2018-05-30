@@ -10,10 +10,11 @@ require '_config.php';
 
 echo <<<END_COMMENT
 /*
- * [array_product] Calcula o produto dos valores de um array
+ * [array_product] Calcula o produto dos valores de um array, multiplicando da
+ * direita para a esquerda.
  */
 END_COMMENT;
-$a = array(12, 5, 2);
+$a = array(5, 5, 2, 2);
 debug( array_product( $a ) );
 
 echo <<<END_COMMENT
