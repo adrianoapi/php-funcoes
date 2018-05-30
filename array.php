@@ -10,6 +10,14 @@ require '_config.php';
 
 echo <<<END_COMMENT
 /*
+ * [array_product] Calcula o produto dos valores de um array
+ */
+END_COMMENT;
+$a = array(12, 5, 2);
+debug( array_product( $a ) );
+
+echo <<<END_COMMENT
+/*
  * [array_change_key_case] Funcao array_change_key_case usada para converter o 
  * indice do array para CASE_LOWER ou CASE_UPPER
  */
