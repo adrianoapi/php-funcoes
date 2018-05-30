@@ -10,6 +10,35 @@ require '_config.php';
 
 echo <<<END_COMMENT
 /*
+ * [pos, next, prev, end] Navega pelos itens do array
+ */
+END_COMMENT;
+$people = array("Peter", "Susan", "Edmund", "Lucy");
+debug( pos( $people ) );
+debug( next( $people ) );
+debug( end( $people ) );
+debug( prev( $people ) );
+
+echo <<<END_COMMENT
+/*
+ * [array_replace] Substitui elementos do primeiro array com os elementos do seugndo.
+ */
+END_COMMENT;
+$city_west = array( "NYC", "London" );
+$city_east = array( "Mumbai", "Beijing" );
+debug( array_replace( $city_west, $city_east ) );
+
+echo <<<END_COMMENT
+/*
+ * [array_search] Procura por um valor em um array e retorna sua chave correspondente
+ * caso seja encontrado.
+ */
+END_COMMENT;
+$a = array("a" => "Jaguar", "b" => "Land Rover", "c" => "Audi", "d" => "Maseratti");
+debug( array_search( "Audi", $a ) );
+
+echo <<<END_COMMENT
+/*
  * [array_product] Calcula o produto dos valores de um array, multiplicando da
  * direita para a esquerda.
  */
