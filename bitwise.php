@@ -36,7 +36,7 @@ echo $a | $b;
 //   00000101
 // & 00000001
 //-----------
-//   00000111 => 5 DECIMAL
+//   00000101 => 5 DECIMAL
 
 /*
  * Operador ^ ( Bitwise XOR )
