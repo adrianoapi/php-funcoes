@@ -83,6 +83,16 @@ debug( array_count_values( $a ) );                                              
 
 echo <<<END_COMMENT
 /*
+ * [count] Faz a contagem de elemtnos no array e quando passar o segundo parâmetro
+ * como true, faz a contagem de forma recursiva.
+ */
+END_COMMENT;
+$cars = array( "Volvo"=> array("XC60","XC90"), "BMW"=> array("X3","X5"), "Toyota"=> array("Highlander") ); 
+echo "<p>Normal count: " .    count( $cars    ) . "</p>";
+echo "<p>Recursive count: " . count( $cars, 1 ) . "</p>";
+
+echo <<<END_COMMENT
+/*
  * [array_diff] Compara os valores do array1 com array2 e retorna a diferença
  */
 END_COMMENT;
@@ -157,7 +167,7 @@ debug( $arr );                                                                  
 | SORT_FLAG_CASE     | pode ser combinado (bitwise OR) com SORT_STRING ou SORT_NATURAL    |
 |                    | para ordenar strings sem considerar maiúsculas e minúsculas        |
 +--------------------+-------------------------------------------------------------------*/
-        
+       
 
 echo <<<END_COMMENT
 /*
