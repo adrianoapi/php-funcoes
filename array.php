@@ -14,9 +14,9 @@ echo <<<END_COMMENT
  */
 END_COMMENT;
 $people = array("Peter", "Susan", "Edmund", "Lucy");
-debug( pos( $people ) );
+debug( pos ( $people ) );
 debug( next( $people ) );
-debug( end( $people ) );
+debug( end ( $people ) );
 debug( prev( $people ) );
 
 echo <<<END_COMMENT
@@ -241,6 +241,9 @@ $fruits = array ("apple", "mango", "peach", "pear", "orange");
 debug( array_slice( $fruits,  2    ) );                                         // returns "peach", "pear", and "orange"
 debug( array_slice( $fruits, -2, 1 ) );                                         // returns "pear"
 debug( array_slice( $fruits,  0, 3 ) );                                         // returns "apple", "mango", and "peach"
+
+$authors = array( "Steinbeck", "Kafka", "Tolkien", "Dickens" );
+debug( array_slice( $authors, 1, 2 ) );                                         // Displays "Array ( [0] => Kafka [1] => Tolkien )"
 
 echo <<<END_COMMENT
 /*
