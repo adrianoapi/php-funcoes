@@ -94,7 +94,7 @@ echo "<p>Recursive count: " . count( $cars, 1 ) . "</p>";                       
 $a = [1 => 'Apple', 3 => 'Cactus', 5 => 'Elderflower'] + ['Banana', 'Dragon Fruit', 'Fig'];
 debug( count( $a ) );                                                           // Display 5
 ksort($a);
-debug($a); // [0] => Banana, [1] => Apple, [2] => Fig, [3] => Cactus, [5] => Elderflower
+debug($a); # [0] => Banana, [1] => Apple, [2] => Fig, [3] => Cactus, [5] => Elderflower
 
 echo <<<END_COMMENT
 /*
@@ -239,11 +239,19 @@ echo <<<END_COMMENT
 END_COMMENT;
 $fruits = array ("apple", "mango", "peach", "pear", "orange");
 debug( array_slice( $fruits,  2    ) );                                         // returns "peach", "pear", and "orange"
-debug( array_slice( $fruits, -2, 1 ) );                                         // returns "pear"
+debug( array_slice( $fruits, -4, 1 ) );                                         // returns "mango"
 debug( array_slice( $fruits,  0, 3 ) );                                         // returns "apple", "mango", and "peach"
 
 $authors = array( "Steinbeck", "Kafka", "Tolkien", "Dickens" );
 debug( array_slice( $authors, 1, 2 ) );                                         // Displays "Array ( [0] => Kafka [1] => Tolkien )"
+
+$myBook = array( "title"   => "The Grapes of Wrath",
+                 "author"  => "John Steinbeck",
+                 "pubYear" => 1939  );
+debug( array_slice( $myBook, 1, 2 ) );                                          // Displays "Array ( [author] => John Steinbeck [pubYear] => 1939 )";
+
+$authors = array( "Steinbeck", "Kafka", "Tolkien", "Dickens" );
+debug( array_slice( $authors, 1 ) ); # Displays "Array ( [0] => Kafka [1] => Tolkien [2] => Dickens )";
 
 echo <<<END_COMMENT
 /*
