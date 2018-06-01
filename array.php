@@ -24,7 +24,7 @@ echo <<<END_COMMENT
  * [array_replace] Substitui elementos do primeiro array com os elementos do seugndo.
  */
 END_COMMENT;
-$city_west = array( "NYC", "London" );
+$city_west = array( "NYC", "London"     );
 $city_east = array( "Mumbai", "Beijing" );
 debug( array_replace( $city_west, $city_east ) );
 
@@ -152,7 +152,7 @@ echo <<<END_COMMENT
 END_COMMENT;
 $arr = array ( "picture1.JPG", "picture2.jpg", "Picture10.jpg", "picture20.jpg" );
 sort ( $arr );
-debug( $arr );                                                                  // [0] => Picture10.jpg, [1] => picture1.JPG, [2] => picture2.jpg, [3] => picture20.jpg
+debug( $arr ); # [0] => Picture10.jpg, [1] => picture1.JPG, [2] => picture2.jpg, [3] => picture20.jpg
 
 /*----------------------------------------------------------------------------------------+
 | sort_flags                                                                              |
