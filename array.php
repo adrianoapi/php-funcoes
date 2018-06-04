@@ -44,7 +44,7 @@ echo <<<END_COMMENT
  */
 END_COMMENT;
 $a = array(5, 5, 2, 2);
-debug( array_product( $a ) );
+debug( array_product( $a ) );                                                   // Display 100
 
 echo <<<END_COMMENT
 /*
@@ -235,6 +235,10 @@ echo <<<END_COMMENT
 /*
  * array_slice() retorna a sequência de elementos de um array delimitado pelos
  * parâmetros offset e length.
+ * A função faz uma cópia dos elementos do array passando um novo indice contado
+ * a partir de 0, ele só mamtém o indice quando ele é uma string.
+ * Para manter a cópia do indice quando for numerico, é necessário passar o quarto
+ * parametro como TRUE;
  */
 END_COMMENT;
 $fruits = array ("apple", "mango", "peach", "pear", "orange");
@@ -251,7 +255,10 @@ $myBook = array( "title"   => "The Grapes of Wrath",
 debug( array_slice( $myBook, 1, 2 ) );                                          // Displays "Array ( [author] => John Steinbeck [pubYear] => 1939 )";
 
 $authors = array( "Steinbeck", "Kafka", "Tolkien", "Dickens" );
-debug( array_slice( $authors, 1 ) ); # Displays "Array ( [0] => Kafka [1] => Tolkien [2] => Dickens )";
+debug( array_slice( $authors, 1          ) );    # Displays "Array ( [0] => Kafka [1] => Tolkien [2] => Dickens )";
+debug( array_slice( $authors, 1, 2       ) );    # Displays [0] => Kafka,   [1] => Tolkien
+debug( array_slice( $authors, 2, 2       ) );    # Displays [0] => Tolkien, [1] => Dickens
+debug( array_slice( $authors, 2, 2, true ) );    # Displays [2] => Tolkien, [3] => Dickens
 
 echo <<<END_COMMENT
 /*

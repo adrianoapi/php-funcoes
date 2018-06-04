@@ -29,7 +29,8 @@ echo "<hr>";
 
 echo <<<END_COMMENT
 /*
- * Como var count é estático, ele retém seu valor anterior sempre que a função é executada.
+ * Como var count é estático, ele retém seu valor anterior sempre que a função é
+ * executada.
  */
 END_COMMENT;
 function track() {
@@ -55,3 +56,7 @@ if (!filter_var( $var, FILTER_VALIDATE_INT, $int_options ))
     echo("Integer is not valid");
 else
     echo("Integer is valid");
+
+echo "<hr>";
+
+echo ord ("hi");
