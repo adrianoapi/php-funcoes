@@ -260,6 +260,20 @@ debug( array_slice( $authors, 1, 2       ) );    # Displays [0] => Kafka,   [1] 
 debug( array_slice( $authors, 2, 2       ) );    # Displays [0] => Tolkien, [1] => Dickens
 debug( array_slice( $authors, 2, 2, true ) );    # Displays [2] => Tolkien, [3] => Dickens
 
+echo "<hr>";
+
+echo "<p>The array: "               . print_r( $authors, true ) . " </p>";      // Array ( [0] => Steinbeck [1] => Kafka [2] => Tolkien [3] => Dickens )
+echo "<p>The current element is: "  . current( $authors       ) . ".</p>";      // Displays Steinbeck
+echo "<p>The next element is: "     . next   ( $authors       ) . ".</p>";      // Displays Kafka
+echo "<p>...and its index is: "     . key    ( $authors       ) . ".</p>";      // Displays 1
+echo "<p>The next element is: "     . next   ( $authors       ) . ".</p>";      // Displays Tolkien
+echo "<p>The previous element is: " . prev   ( $authors       ) . ".</p>";      // Displays Kafka
+echo "<p>The first element is: "    . reset  ( $authors       ) . ".</p>";      // Displays Steinbeck
+echo "<p>The last element is: "     . end    ( $authors       ) . ".</p>";      // Displays Dickens
+echo "<p>The previous element is: " . prev   ( $authors       ) . ".</p>";      // Displays Tolkien
+
+echo "<hr>";
+
 echo <<<END_COMMENT
 /*
  * Soma todas os valores numericos do array
