@@ -276,6 +276,23 @@ echo "<hr>";
 
 echo <<<END_COMMENT
 /*
+ * [each] Retorna o par chave/valor corrente de um array e avança o seu cursor
+ */
+END_COMMENT;
+ $myBook = array( "title" => "The Grapes of Wrath",
+                 "author" => "John Steinbeck",
+                 "pubYear" => 1939 );
+$element = each( $myBook );
+debug($element);
+echo "Key: "   . $element[0]       . "<br/>";
+echo "Value: " . $element[1]       . "<br/>";
+echo "Key: "   . $element["key"]   . "<br/>";
+echo "Value: " . $element["value"] . "<br/>";
+
+echo "<hr>";
+
+echo <<<END_COMMENT
+/*
  * Soma todas os valores numericos do array
  */
 END_COMMENT;
