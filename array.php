@@ -284,10 +284,10 @@ END_COMMENT;
                  "pubYear" => 1939 );
 $element = each( $myBook );
 debug($element);
-echo "Key: "   . $element[0]       . "<br/>";
-echo "Value: " . $element[1]       . "<br/>";
-echo "Key: "   . $element["key"]   . "<br/>";
-echo "Value: " . $element["value"] . "<br/>";
+echo "Key: "   . $element[0]       . "<br/>";                                   // Displays title
+echo "Value: " . $element[1]       . "<br/>";                                   // Displays The Grapes of Wrath
+echo "Key: "   . $element["key"]   . "<br/>";                                   // Displays title
+echo "Value: " . $element["value"] . "<br/>";                                   // Displays The Grapes of Wrath
 
 echo "<hr>";
 
