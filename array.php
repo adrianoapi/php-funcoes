@@ -279,9 +279,9 @@ echo <<<END_COMMENT
  * [each] Retorna o par chave/valor corrente de um array e avança o seu cursor
  */
 END_COMMENT;
- $myBook = array( "title" => "The Grapes of Wrath",
-                 "author" => "John Steinbeck",
-                 "pubYear" => 1939 );
+ $myBook = array( "title"   => "The Grapes of Wrath",
+                  "author"  => "John Steinbeck",
+                  "pubYear" => 1939 );
 $element = each( $myBook );
 debug($element);
 echo "Key: "   . $element[0]       . "<br/>";                                   // Displays title
@@ -289,6 +289,14 @@ echo "Value: " . $element[1]       . "<br/>";                                   
 echo "Key: "   . $element["key"]   . "<br/>";                                   // Displays title
 echo "Value: " . $element["value"] . "<br/>";                                   // Displays The Grapes of Wrath
 
+echo "<br/>";
+ $myBook = array( "title"   => "The Grapes of Wrath",
+                  "author"  => "John Steinbeck",
+                  "pubYear" => 1939 );
+while ( $element = each( $myBook ) ) {
+  echo "<dt>$element[0]</dt>";
+  echo "<dd>$element[1]</dd>";
+}
 echo "<hr>";
 
 echo <<<END_COMMENT
