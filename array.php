@@ -317,6 +317,23 @@ echo "<hr>";
 
 echo <<<END_COMMENT
 /*
+ * [foreach] Passando referência para o array com o operador "&"
+ */
+END_COMMENT;
+$authors = array( "Steinbeck", "Kafka", "Tolkien", "Dickens" );
+
+foreach ( $authors as &$val ) {
+  if ( $val == "Tolkien" ) $val = "Hardy";  # Displays "Steinbeck Kafka Hardy Dickens";
+  echo $val . " ";
+}
+unset( $val );
+echo "<br/>";
+debug ( $authors ); # Displays "Array ( [0] => Steinbeck [1] => Kafka [2] => Hardy [3] => Dickens )"
+
+echo "<hr>";
+
+echo <<<END_COMMENT
+/*
  * Soma todas os valores numericos do array
  */
 END_COMMENT;
