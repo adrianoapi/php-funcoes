@@ -301,6 +301,22 @@ echo "<hr>";
 
 echo <<<END_COMMENT
 /*
+ * [foreach] Trabalhando com loop
+ */
+END_COMMENT;
+
+$myBook = array( "title"   => "The Grapes of Wrath",
+                 "author"  => "John Steinbeck",
+                 "pubYear" => 1939 );
+foreach ( $myBook as $key => $value ) {
+  echo "<dt>$key</dt>";
+  echo "<dd>$value</dd>";
+}
+
+echo "<hr>";
+
+echo <<<END_COMMENT
+/*
  * Soma todas os valores numericos do array
  */
 END_COMMENT;
