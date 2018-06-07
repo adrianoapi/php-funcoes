@@ -40,4 +40,27 @@ sort ( $authors );
 debug( $authors ); # Displays Array( [0] => Dickens [1] => Kafka [2] => Steinbeck [3] => Tolkien )
 rsort( $authors );
 debug( $authors ); # Displays Array( [0] => Tolkien [1] => Steinbeck [2] => Kafka [3] => Dickens )
+
+echo <<<END_COMMENT
+/*
+ * [sort] Ordenando Associative Arrays with asort() and arsort()
+ * Notice how sort() has reindexed the associative array, replacing the original
+ * string keys with numeric keys and effectively turning the array into an
+ * indexed array
+ */
+END_COMMENT;
+$myBook = array( "title"  => "Bleak House",
+                 "author" => "Dickens",
+                 "year"   => 1853 );
+sort ( $myBook );
+debug( $myBook ); # Array( [0] => Bleak House [1] => Dickens [2] => 1853 )
+
+
+$myBook = array( "title"  => "Bleak House",
+                 "author" => "Dickens",
+                 "year"   => 1853 );
+asort ( $myBook );
+debug ( $myBook ); # Array( [title] => Bleak House [author] => Dickens [year] => 1853 )
+arsort( $myBook );
+debug ( $myBook ); # Array( [year] => 1853 [author] => Dickens [title] => Bleak House )
 ?>
