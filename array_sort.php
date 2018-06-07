@@ -30,6 +30,11 @@ $games = array(
     "Gran Turismo 2"
 );
 
+echo <<<END_COMMENT
+/*
+ * [sort] Ordena uma lista de autores por ordem alfabética ascendente e descendente
+ */
+END_COMMENT;
 $authors = array( "Steinbeck", "Kafka", "Tolkien", "Dickens" );
 sort ( $authors );
 debug( $authors ); # Displays Array( [0] => Dickens [1] => Kafka [2] => Steinbeck [3] => Tolkien )
