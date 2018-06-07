@@ -132,4 +132,13 @@ $myBooks = array(
 array_multisort( $myBooks );
 debug( $myBooks );
 
+echo <<<END_COMMENT
+/*
+ * Short Array Syntax: From PHP version 5.4 onwards, it became possible to use a
+ * short array syntax that replaces array() with []
+ */
+END_COMMENT;
+$array = ["Zero" => "0","One" => "1","Two" => "2"];
+debug( $array );
+
 ?>
