@@ -55,7 +55,13 @@ $myBook = array( "title"  => "Bleak House",
 sort ( $myBook );
 debug( $myBook ); # Array( [0] => Bleak House [1] => Dickens [2] => 1853 )
 
-
+echo <<<END_COMMENT
+/*
+ * [asort] This is where asort() and arsort() come in. They work just like sort()
+ * and rsort(), but they preserve the association between each element's key and
+ * its value:
+ */
+END_COMMENT;
 $myBook = array( "title"  => "Bleak House",
                  "author" => "Dickens",
                  "year"   => 1853 );
