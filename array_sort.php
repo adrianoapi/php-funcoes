@@ -85,7 +85,7 @@ debug ( $myBook );
 
 echo <<<END_COMMENT
 /*
- * [array_multisort] Ordena pelo indice mantendo os valores originais
+ * [array_multisort] Ordena multiplos arrays pelo indice mantendo os valores originais
  */
 END_COMMENT;
 $authors  = array( "Steinbeck", "Kafka", "Tolkien", "Dickens" );
@@ -95,5 +95,41 @@ array_multisort( $authors, $titles, $pubYears );
 debug( $authors  ); # Array( [0] => Dickens [1] => Kafka [2] => Steinbeck [3] => Tolkien )
 debug( $titles   ); # Array( [0] => A Tale of Two Cities [1] => The Trial [2] => The Grapes of Wrath [3] => The Hobbit )
 debug( $pubYears ); # Array( [0] => 1859 [1] => 1925 [2] => 1939 [3] => 1937 )
+
+echo <<<END_COMMENT
+/*
+ * [array_multisort] Ordenou o array pelo valor do primeiro indice de cada um
+ */
+END_COMMENT;
+$myBooks = array(
+  array(
+    "title" => "The Grapes of Wrath",
+    "author" => "John Steinbeck",
+    "pubYear" => 1939
+  ),
+  array(
+    "title" => "Travels With Charley",
+    "author" => "John Steinbeck",
+    "pubYear" => 1962
+  ),
+  array(
+    "title" => "The Trial",
+    "author" => "Franz Kafka",
+    "pubYear" => 1925
+  ),
+  array(
+    "title" => "The Hobbit",
+    "author" => "J. R. R. Tolkien",
+    "pubYear" => 1937
+  ),
+  array(
+    "title" => "A Tale of Two Cities",
+    "author" => "Charles Dickens",
+    "pubYear" => 1859
+  ),
+);
+
+array_multisort( $myBooks );
+debug( $myBooks );
 
 ?>
