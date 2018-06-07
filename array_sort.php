@@ -30,4 +30,9 @@ $games = array(
     "Gran Turismo 2"
 );
 
+$authors = array( "Steinbeck", "Kafka", "Tolkien", "Dickens" );
+sort ( $authors );
+debug( $authors ); # Displays Array( [0] => Dickens [1] => Kafka [2] => Steinbeck [3] => Tolkien )
+rsort( $authors );
+debug( $authors ); # Displays Array( [0] => Tolkien [1] => Steinbeck [2] => Kafka [3] => Dickens )
 ?>
