@@ -69,4 +69,17 @@ asort ( $myBook );
 debug ( $myBook ); # Array( [title] => Bleak House [author] => Dickens [year] => 1853 )
 arsort( $myBook );
 debug ( $myBook ); # Array( [year] => 1853 [author] => Dickens [title] => Bleak House )
+
+echo <<<END_COMMENT
+/*
+ * [ksort] Ordena pelo indice mantendo os valores originais
+ */
+END_COMMENT;
+$myBook = array( "title"  => "Bleak House",
+                 "author" => "Dickens",
+                 "year"   => 1853 );
+ksort ( $myBook );
+debug ( $myBook );
+krsort( $myBook );
+debug ( $myBook );
 ?>
