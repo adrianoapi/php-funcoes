@@ -82,4 +82,18 @@ ksort ( $myBook );
 debug ( $myBook );
 krsort( $myBook );
 debug ( $myBook );
+
+echo <<<END_COMMENT
+/*
+ * [array_multisort] Ordena pelo indice mantendo os valores originais
+ */
+END_COMMENT;
+$authors  = array( "Steinbeck", "Kafka", "Tolkien", "Dickens" );
+$titles   = array( "The Grapes of Wrath", "The Trial", "The Hobbit", "A Tale of Two Cities" );
+$pubYears = array( 1939, 1925, 1937, 1859 );
+array_multisort( $authors, $titles, $pubYears );
+debug( $authors  ); # Array( [0] => Dickens [1] => Kafka [2] => Steinbeck [3] => Tolkien )
+debug( $titles   ); # Array( [0] => A Tale of Two Cities [1] => The Trial [2] => The Grapes of Wrath [3] => The Hobbit )
+debug( $pubYears ); # Array( [0] => 1859 [1] => 1925 [2] => 1939 [3] => 1937 )
+
 ?>
