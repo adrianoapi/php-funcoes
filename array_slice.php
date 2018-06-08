@@ -23,4 +23,13 @@ require '_config.php';
 |                 | point in an array                                      |
 +-----------------+-------------------------------------------------------*/
 
+echo <<<END_COMMENT
+/*
+ * [array_unshift] Insert an element or elements at the start of an array
+ */
+END_COMMENT;
+$authors = array( "Steinbeck", "Kafka", "Tolkien", "Dickens" );
+array_unshift($authors, "Hardy", "Melville");
+debug( $authors );
+
 ?>
