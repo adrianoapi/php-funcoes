@@ -29,7 +29,7 @@ echo <<<END_COMMENT
  */
 END_COMMENT;
 $authors = array( "Steinbeck", "Kafka", "Tolkien", "Dickens" );
-array_unshift($authors, "Hardy", "Melville" ); # Displays 6
+array_unshift($authors, "Hardy", "Melville" );                                  // Displays 6
 debug( $authors ); # Array( [0] => Hardy [1] => Melville [2] => Steinbeck [3] => Kafka [4] => Tolkien [5] => Dickens )
 
 echo <<<END_COMMENT
@@ -41,7 +41,7 @@ END_COMMENT;
 $myBook = array( "title" => "The Grapes of Wrath",
                  "author" => "John Steinbeck",
                  "pubYear" => 1939 );
-array_shift( $myBook ); # Displays "The Grapes of Wrath"
+array_shift( $myBook );                                                         // Displays "The Grapes of Wrath"
 debug      ( $myBook ); # Array( [author] => John Steinbeck [pubYear] => 1939 )
 
 echo <<<END_COMMENT
@@ -50,6 +50,24 @@ echo <<<END_COMMENT
  */
 END_COMMENT;
 $authors = array( "Steinbeck", "Kafka", "Tolkien", "Dickens" );
-array_push( $authors, "Hardy", "Melville" );
+array_push( $authors, "Hardy", "Melville" );                                    // Displays "6"
 debug     ( $authors ); # Array( [0] => Steinbeck [1] => Kafka [2] => Tolkien [3] => Dickens [4] => Hardy [5] => Melville )
+
+$authors  = array( "Steinbeck", "Kafka", "Tolkien", "Dickens" );
+$nAuthors = array( "Hardy", "Melville" );
+array_push( $authors, $nAuthors );
+debug     ( $authors );
+
+echo <<<END_COMMENT
+/*
+ * [array_pop]  Removes the last element from an array, and returns its value,
+ * but not its key
+ */
+END_COMMENT;
+$myBook = array( "title" => "The Grapes of Wrath",
+                 "author" => "John Steinbeck",
+                 "pubYear" => 1939 );
+array_pop( $myBook );                                                         // Displays "1939"
+debug    ( $myBook ); # Array( [title] => The Grapes of Wrath [author] => John Steinbeck )
+
 ?>
