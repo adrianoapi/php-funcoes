@@ -30,6 +30,11 @@ echo <<<END_COMMENT
 END_COMMENT;
 $authors = array( "Steinbeck", "Kafka", "Tolkien", "Dickens" );
 array_unshift($authors, "Hardy", "Melville");
-debug( $authors );
+debug( $authors ); # Array( [0] => Hardy [1] => Melville [2] => Steinbeck [3] => Kafka [4] => Tolkien [5] => Dickens )
 
+$myBook = array( "title" => "The Grapes of Wrath",
+                 "author" => "John Steinbeck",
+                 "pubYear" => 1939 );
+array_shift( $myBook );
+debug      ( $myBook ); # Array( [author] => John Steinbeck [pubYear] => 1939 )
 ?>
