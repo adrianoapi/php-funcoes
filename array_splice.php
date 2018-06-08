@@ -87,4 +87,20 @@ $a2 = array( "0" => "purple", "1" => "orange" );
 array_splice( $a1, 1, 0, $a2 );
 debug       ( $a1 ); # Array( [0] => red [1] => purple [2] => orange [3] => green )
 
+echo <<<END_COMMENT
+/*
+ * [array_merge] This function takes one or more arrays as arguments, and returns
+ * the merged array. The original array(s) are not affected.
+ */
+END_COMMENT;
+$authors     = array( "Steinbeck", "Kafka" );
+$moreAuthors = array( "Tolkien", "Milton"  );
+$newArray    = array_merge( $authors, $moreAuthors );
+debug( $newArray ); # Array( [0] => Steinbeck [1] => Kafka [2] => Tolkien [3] => Milton )
+
+$myBook = array( "title"   => "The Grapes of Wrath",
+                 "author"  => "John Steinbeck",
+                 "pubYear" => 1939 );
+$myBook = array_merge( $myBook, array( "title" => "East of Eden", "pubYear" => 1952 ) );
+debug($myBook); # Array( [title] => East of Eden [author] => John Steinbeck [pubYear] => 1952 )
 ?>
