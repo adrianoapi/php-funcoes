@@ -29,12 +29,18 @@ echo <<<END_COMMENT
  */
 END_COMMENT;
 $authors = array( "Steinbeck", "Kafka", "Tolkien", "Dickens" );
-array_unshift($authors, "Hardy", "Melville");
+array_unshift($authors, "Hardy", "Melville"); # Displays 6
 debug( $authors ); # Array( [0] => Hardy [1] => Melville [2] => Steinbeck [3] => Kafka [4] => Tolkien [5] => Dickens )
 
+echo <<<END_COMMENT
+/*
+ * [array_shift]  Removes the first element from an array, and returns its value,
+ * but not its key
+ */
+END_COMMENT;
 $myBook = array( "title" => "The Grapes of Wrath",
                  "author" => "John Steinbeck",
                  "pubYear" => 1939 );
-array_shift( $myBook );
+array_shift( $myBook ); # Displays "The Grapes of Wrath"
 debug      ( $myBook ); # Array( [author] => John Steinbeck [pubYear] => 1939 )
 ?>
