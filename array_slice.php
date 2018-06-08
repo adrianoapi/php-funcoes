@@ -38,8 +38,8 @@ echo <<<END_COMMENT
  * but not its key
  */
 END_COMMENT;
-$myBook = array( "title" => "The Grapes of Wrath",
-                 "author" => "John Steinbeck",
+$myBook = array( "title"   => "The Grapes of Wrath",
+                 "author"  => "John Steinbeck",
                  "pubYear" => 1939 );
 array_shift( $myBook );                                                         // Displays "The Grapes of Wrath"
 debug      ( $myBook ); # Array( [author] => John Steinbeck [pubYear] => 1939 )
@@ -64,10 +64,27 @@ echo <<<END_COMMENT
  * but not its key
  */
 END_COMMENT;
-$myBook = array( "title" => "The Grapes of Wrath",
-                 "author" => "John Steinbeck",
+$myBook = array( "title"   => "The Grapes of Wrath",
+                 "author"  => "John Steinbeck",
                  "pubYear" => 1939 );
-array_pop( $myBook );                                                         // Displays "1939"
+array_pop( $myBook );                                                           // Displays "1939"
 debug    ( $myBook ); # Array( [title] => The Grapes of Wrath [author] => John Steinbeck )
+
+echo <<<END_COMMENT
+/*
+ * [array_splice]  Retorna elementos de uma array subscrevendo por novos e mudando
+ * o indice dos novos elementos
+ */
+END_COMMENT;
+$a1 = array( "a" => "red", "b" => "green", "c" => "blue", "d" => "yellow" );
+$a2 = array( "a" => "purple", "b" => "orange" );
+array_splice( $a1, 0, 2, $a2 );                                                 // Array ( [a] => red [b] => green ) 
+debug       ( $a1 ); # Array([0] => purple [1] => orange [c] => blue [d] => yellow)
+
+
+$a1 = array( "0" => "red", "1" => "green" );
+$a2 = array( "0" => "purple", "1" => "orange" );
+array_splice( $a1, 1, 0, $a2 );
+debug       ( $a1 ); # Array( [0] => red [1] => purple [2] => orange [3] => green )
 
 ?>
