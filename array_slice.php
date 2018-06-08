@@ -29,7 +29,7 @@ echo <<<END_COMMENT
  */
 END_COMMENT;
 $authors = array( "Steinbeck", "Kafka", "Tolkien", "Dickens" );
-array_unshift($authors, "Hardy", "Melville"); # Displays 6
+array_unshift($authors, "Hardy", "Melville" ); # Displays 6
 debug( $authors ); # Array( [0] => Hardy [1] => Melville [2] => Steinbeck [3] => Kafka [4] => Tolkien [5] => Dickens )
 
 echo <<<END_COMMENT
@@ -43,4 +43,13 @@ $myBook = array( "title" => "The Grapes of Wrath",
                  "pubYear" => 1939 );
 array_shift( $myBook ); # Displays "The Grapes of Wrath"
 debug      ( $myBook ); # Array( [author] => John Steinbeck [pubYear] => 1939 )
+
+echo <<<END_COMMENT
+/*
+ * [array_push] Insert an element or elements at the end of an array
+ */
+END_COMMENT;
+$authors = array( "Steinbeck", "Kafka", "Tolkien", "Dickens" );
+array_push( $authors, "Hardy", "Melville" );
+debug     ( $authors ); # Array( [0] => Steinbeck [1] => Kafka [2] => Tolkien [3] => Dickens [4] => Hardy [5] => Melville )
 ?>
