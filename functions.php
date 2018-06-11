@@ -29,4 +29,15 @@ foreach ( $trigFunctions as $trigFunction )
 {
   echo "$trigFunction($degrees) = " . $trigFunction( deg2rad( $degrees ) ) . "<br/>";
 }
+
+echo <<<END_COMMENT
+/*
+ * Creating Anonymous Functions
+ */
+END_COMMENT;
+echo "<br/>";
+$mode = "+";
+$processNumbers = create_function( '$a, $b', "return \$a $mode \$b;" );
+echo $processNumbers( 2, 3 );
+
 ?>

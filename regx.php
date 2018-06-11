@@ -46,8 +46,8 @@ One more day and I'd be amazed        | Mais um dia e eu ficaria espantado
 Just to see it waiting                | Só para vê-lo esperando
 And if I make it I'm still alone      | E se eu fizer isso eu ainda estou sozinho
 No more hope for better days          | Não há mais esperança para dias melhores
-But if I could change
-Then I'd really be amazed
+But if I could change                 | Mas se eu pudesse mudar
+Then I'd really be amazed             | Então eu realmente ficaria espantado
 And when you know you can't relate
 To one more shiny face
 Your heart breaks
