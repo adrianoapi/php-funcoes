@@ -119,4 +119,44 @@ Sweet child,
 Sweet child of mine
 END_TEXT;
 
+$shine = <<<END_TXT
+Give me a word                        | Dei-me uma palavra
+Give me a sign                        | Dei-me um sinal
+Show me where to look                 | Mostre-me onde olhar
+Tell me what will I find              | Diga-me o que vou encontrar
+Lay me on the ground                  | Deite-me no chão
+Fly me in the sky                     | Voe-me no céu
+Show me where to look                 | Mostre-me onde olhar
+Tell me what will I find              | Diga-me o que vou encontrar
+Oh, heaven let your light shine down  | Oh, o céu deixe sua luz brilhar
+Love is in the water                  | O amor está na água
+Love is in the air                    | O amor está no ar
+Show me where to look                 | Mostre-me onde olhar
+Tell me will love be there            | Diga-me o amor estará lá
+Teach me how to speak
+Teach me how to share
+Teach me where to go
+Tell me will love be there
+Oh, heaven let your light shine down
+Give me a word
+Give me a sign
+Show me where to look
+Tell me what will I find
+Lay me on the ground
+Fly me in the sky
+Show me where to look
+Tell me what will I find
+Oh, heaven let your light shine down
+I'm gonna let it shine
+I'm gonna let it shine
+Heaven send a light, let it shine on me
+Hey yeah
+Hey yeah
+Heaven send a light, let it shine on me
+It's gonna shine on
+Shine on me
+Its gonna shine on
+Well come on and shine
+END_TXT;
+
 ?>

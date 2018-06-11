@@ -103,4 +103,17 @@ $myBook = array( "title"   => "The Grapes of Wrath",
                  "pubYear" => 1939 );
 $myBook = array_merge( $myBook, array( "title" => "East of Eden", "pubYear" => 1952 ) );
 debug($myBook); # Array( [title] => East of Eden [author] => John Steinbeck [pubYear] => 1952 )
+
+echo <<<END_COMMENT
+/*
+ * [list] Converte um array em variáveis
+ */
+END_COMMENT;
+$sales = array (
+  30,
+  40,
+  50
+);
+list ($a, $b, $c) = $sales;
+echo "<br/>" . $a;
 ?>
