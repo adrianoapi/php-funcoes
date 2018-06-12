@@ -120,4 +120,25 @@ $counter++;
 echo "$counter<br/>";                                                           // Displays "3"
 resetCounter( $counter );
 echo "$counter<br/>";                                                           // Displays "0"
+
+echo "<hr>";
+
+echo <<<END_COMMENT
+/*
+ * Fazendo referência a uma função
+ */
+END_COMMENT;
+echo "<br/>";
+$myNumber = 5;
+ 
+function &getMyNumber()
+{
+  global $myNumber;
+  return $myNumber;
+}
+ 
+$numberRef =& getMyNumber();
+$numberRef++;
+echo "\$myNumber  = $myNumber<br/>";                                            // Displays "6"
+echo "\$numberRef = $numberRef<br/>";                                           // Displays "6"
 ?>
