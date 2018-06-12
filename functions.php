@@ -77,7 +77,7 @@ echo "<h2>The text:</h2>";
 echo "<div style=\"width: 30em;\">$myText</div>";
 
 $myText = preg_replace( "/[\,\.]/", "", $myText );
-$words = array_unique( preg_split( "/[ \n\n\t]+/", $myText ) );
+$words  = array_unique( preg_split( "/[ \n\n\t]+/", $myText ) );
 usort( $words, create_function( '$a, $b', 'return strlen($a) - strlen($b); ' ) );
 
 echo "<h2>The sorted words:</h2>";
@@ -88,4 +88,17 @@ foreach ( $words as $word ) {
 }
  
 echo "</div>";
+
+echo <<<END_COMMENT
+/*
+ * Working with References
+ */
+END_COMMENT;
+$myVar = 123;
+$myRef =& $myVar;
+$myRef++;
+echo "<br/>";
+echo $myRef . "<br/>";  // Displays "124"
+echo $myVar . "<br/>";  // Displays "124"
+
 ?>
