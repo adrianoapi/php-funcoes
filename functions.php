@@ -40,4 +40,18 @@ $mode = "+";
 $processNumbers = create_function( '$a, $b', "return \$a $mode \$b;" );
 echo $processNumbers( 2, 3 );
 
+echo <<<END_COMMENT
+/*
+ * Static variavel
+ */
+END_COMMENT;
+function nextNumber()
+{
+  static $counter = 0;
+  return ++$counter;
+}
+echo "<br/>" . "I've counted to: " . nextNumber();
+echo "<br/>" . "I've counted to: " . nextNumber();
+echo "<br/>" . "I've counted to: " . nextNumber();
+
 ?>
