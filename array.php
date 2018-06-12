@@ -350,4 +350,16 @@ $array1 = array( "a" => "verde", "vermelho", "azul"    );
 $array2 = array( "b" => "verde", "amarelo", "vermelho" );
 debug( array_intersect( $array1, $array2 ) );                                   // [a] => verde, [0] => vermelho
 
+echo <<<END_COMMENT
+/*
+ * Preenche um array com valores, especificando chaves:
+ * keys - Array de valores que serão usados como chaves. Valores ilegais para
+ * chaves serão convertidos para string.
+ * value - Valor para usar no preenchimento.
+ */
+END_COMMENT;
+$keys = array('foo', 5, 10, 'bar');
+$a    = array_fill_keys($keys, 'banana');
+debug( $a ); # Array ( [foo] => banana [5] => banana [10] => banana [bar] => banana )
+
 ?>
