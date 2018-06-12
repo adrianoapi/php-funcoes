@@ -141,4 +141,20 @@ $numberRef =& getMyNumber();
 $numberRef++;
 echo "\$myNumber  = $myNumber<br/>";                                            // Displays "6"
 echo "\$numberRef = $numberRef<br/>";                                           // Displays "6"
+
+echo <<<END_COMMENT
+/*
+ * O truque aqui está no perador --, que não será executado;
+ */
+END_COMMENT;
+echo "<br/>";
+function fun($num1 , $num2)
+     {
+         echo '$num1 = '.$num1.'<br />$num2 ='.$num2.' ';
+         if ($num1 < $num2)
+             return;
+         else
+             fun ($num1-- , ++$num2);
+     }
+     fun(3 , 2);
 ?>
