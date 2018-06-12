@@ -98,7 +98,26 @@ $myVar = 123;
 $myRef =& $myVar;
 $myRef++;
 echo "<br/>";
-echo $myRef . "<br/>";  // Displays "124"
-echo $myVar . "<br/>";  // Displays "124"
+echo $myRef . "<br/>";                                                          // Displays "124"
+echo $myVar . "<br/>";                                                          // Displays "124"
 
+echo "<hr>";
+
+echo <<<END_COMMENT
+/*
+ * counter example by using a reference
+ */
+END_COMMENT;
+echo "<br/>";
+function resetCounter( &$c )
+{
+  $c = 0;
+}
+$counter = 0;
+$counter++;
+$counter++;
+$counter++;
+echo "$counter<br/>";                                                           // Displays "3"
+resetCounter( $counter );
+echo "$counter<br/>";                                                           // Displays "0"
 ?>
