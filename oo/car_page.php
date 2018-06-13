@@ -31,12 +31,10 @@ require '../_config.php';
     echo "<h2>Some properties:</h2>";
     echo "<p>The Beetle's color is " . $beetle->color . ".</p>";
     echo "<p>The Mustang's manufacturer is " . $mustang->manufacturer . ".</p>";
-    echo "<h2>The \$beetle Object:</h2><pre>";
+    echo "<h2>The \$beetle Object:</h2>";
     debug( $beetle );
-    echo "</pre>";
-    echo "<h2>The \$mustang Object:</h2><pre>";
+    echo "<h2>The \$mustang Object:</h2>";
     debug( $mustang );
-    echo "</pre>";
  
 ?>
   </body>
