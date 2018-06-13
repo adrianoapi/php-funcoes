@@ -133,10 +133,10 @@ Love is in the water                  | O amor está na água
 Love is in the air                    | O amor está no ar
 Show me where to look                 | Mostre-me onde olhar
 Tell me will love be there            | Diga-me o amor estará lá
-Teach me how to speak
-Teach me how to share
-Teach me where to go
-Tell me will love be there
+Teach me how to speak                 | Ensina-me a falar
+Teach me how to share                 | Ensina-me a compartilhar
+Teach me where to go                  | Me ensine onde ir
+Tell me will love be there            | Diga-me o amor estará lá
 Oh, heaven let your light shine down
 Give me a word
 Give me a sign

@@ -38,7 +38,19 @@ END_COMMENT;
 echo "<br/>";
 $mode = "+";
 $processNumbers = create_function( '$a, $b', "return \$a $mode \$b;" );
-echo $processNumbers( 2, 3 );
+debug( $processNumbers( 2, 3 ) );
+
+echo "<hr>";
+
+$foo = create_function('$x', 'return $x*$x;');
+debug ( $foo(10) );
+
+echo "<hr>";
+
+$foo = create_function("\$x", "return \$x*\$x;");
+debug ( $foo(10) );
+
+echo "<hr>";
 
 echo <<<END_COMMENT
 /*
