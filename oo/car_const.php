@@ -23,7 +23,7 @@ debug( $myCar );
 
 echo "The model car is: ";
 switch ($myCar->type){
-    case Car::HATCHBACK:
+  case Car::HATCHBACK:
     echo "hatchback";
     break;
   case Car::STATION_WAGON:
@@ -32,6 +32,8 @@ switch ($myCar->type){
   case Car::SUV:
     echo "SUV";
     break;
+  default:
+      echo "Não definido";
 }
 
 ?>
