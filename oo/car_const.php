@@ -3,13 +3,33 @@
 class Car
 {
     
-  const  HATCHBACK     = 1;
-  const  STATION_WAGON = 2;
-  const  SUV           = 3;
-  public $model;
-  public $color;
-  public $manufacturer;
-  public $type;
+  const   HATCHBACK     = 1;
+  const   STATION_WAGON = 2;
+  const   SUV           = 3;
+  public  $model;
+  public  $color;
+  public  $manufacturer;
+  public  $type;
+  private $speed        = 0;
+  
+  public function accelerate()
+  {
+      if($this->speed >= 100 ) return false;
+      $this->speed += 10;
+      return true;
+  }
+  
+  public function brake()
+  {
+      if($this->speed <= 0) return false;
+      $this->speed -= 10;
+      return true;
+  }
+  
+  public function getSpeed()
+  {
+      return $this->speed;
+  }
   
 }
  
@@ -33,7 +53,22 @@ switch ($myCar->type){
     echo "SUV";
     break;
   default:
-      echo "Não definido";
+    echo "Não definido";
 }
 
+echo "<hr>";
+
+echo "<p>Stepping on the gas...<br />";
+ 
+while ( $myCar->accelerate() ) {
+  echo "Current speed: " . $myCar->getSpeed() . " mph<br />";
+}
+
+echo "</p><p>Top speed! Slowing down...<br />";
+ 
+while ( $myCar->brake() ) {
+  echo "Current speed: " . $myCar->getSpeed() . " mph<br />";
+}
+ 
+echo "</p><p>Stopped!</p>";
 ?>
