@@ -169,4 +169,18 @@ function fun($num1 , $num2)
              fun ($num1-- , ++$num2);
      }
      fun(3 , 2);
+
+echo <<<END_COMMENT
+/*
+ * Passa uma função para uma variável
+ */
+END_COMMENT;
+function foo($string)
+{
+    echo $string;
+}
+
+$bar = "foo";
+$bar("Hello World!");
+
 ?>
