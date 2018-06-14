@@ -31,6 +31,11 @@ class Car
       return $this->speed;
   }
   
+  public static function calcConsumo($km, $litros)
+  {
+      return $km / $litros;
+  }
+  
 }
  
 $myCar = new Car;
@@ -71,4 +76,7 @@ while ( $myCar->brake() ) {
 }
  
 echo "</p><p>Stopped!</p>";
+
+echo "<p>Méida de 1L para cada " . Car::calcConsumo(10, 2) . "KM</p>"
+        
 ?>
