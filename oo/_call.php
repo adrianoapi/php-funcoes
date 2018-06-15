@@ -8,6 +8,8 @@
  
 <?php
  
+require '../_config.php'; 
+
 class CleverString {
 
     private        $_theString        = "";
@@ -22,7 +24,7 @@ class CleverString {
     }
 
     public function __call( $methodName, $arguments ) {
-        if ( in_array( $methodName, CleverString::$_allowedFunctions ) ) {
+        if ( in_array( $methodName, self::$_allowedFunctions ) ) {
             array_unshift( $arguments, $this->_theString );
             return call_user_func_array( $methodName, $arguments );
         } else {
@@ -38,6 +40,7 @@ echo "<p>The length of the string is: " . $obj->strlen() . "</p>";
 echo "<p>The string in uppercase letters is: " . $obj->strtoupper() ."</p>";
 echo "<p>The letter 'o' occurs at position: " . $obj->strpos( "o" ) ."</p>";
 $obj->var_dump();
+debug($obj);
 $obj->TESTE();
 ?>
  
