@@ -3,7 +3,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <title>Using __get() and __set()</title>
-    <link rel="stylesheet" type="text/css" href="common.css" />
   </head>
   <body>
     <h1>Using __get() and __set()</h1>
