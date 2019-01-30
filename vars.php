@@ -4,7 +4,7 @@ require '_config.php';
 
 echo <<<END_COMMENT
 /*
- * O signal de & irá referenciar a variavel bar.
+ * O signal de & irÃ¡ referenciar a variavel bar.
  */
 END_COMMENT;
 $foo = 'Bob';              
@@ -17,8 +17,8 @@ echo "<hr>";
 
 echo <<<END_COMMENT
 /*
- * O php trata Strings da mesma forma que arrays, permitindo que caracteres específicos
- * sejam acessados via notação offset de array.
+ * O php trata Strings da mesma forma que arrays, permitindo que caracteres especÃ­ficos
+ * sejam acessados via notaÃ§Ã£o offset de array.
  */
 END_COMMENT;
 $color = "maroon";
@@ -29,7 +29,7 @@ echo "<hr>";
 
 echo <<<END_COMMENT
 /*
- * Como var count é estático, ele retém seu valor anterior sempre que a função é
+ * Como var count Ã© estÃ¡tico, ele retÃ©m seu valor anterior sempre que a funÃ§Ã£o Ã©
  * executada.
  */
 END_COMMENT;
@@ -46,8 +46,8 @@ echo "<hr>";
 
 echo <<<END_COMMENT
 /*
- * Como o número inteiro é "300" não está no intervalo especificado e a saída do
- * código acima será: "Integer is not valid".
+ * Como o nÃºmero inteiro Ã© "300" nÃ£o estÃ¡ no intervalo especificado e a saÃ­da do
+ * cÃ³digo acima serÃ¡: "Integer is not valid".
  */
 END_COMMENT;
 $var         = 300;
@@ -60,3 +60,5 @@ else
 echo "<hr>";
 
 echo ord ("hi");
+
+//'suspensao_agenda_motivo_desativacao' => $_REQUEST['SuspensaoAgenda']['suspensao_agenda_motivo_desativacao'],
