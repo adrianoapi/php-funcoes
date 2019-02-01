@@ -3,7 +3,7 @@
 
 require_once 'Crawler.php';
 
-
+//teste
 #$startURL = 'https://olhardigital.com.br/';
 $startURL = 'https://super.abril.com.br/';
 $depth = 6;
