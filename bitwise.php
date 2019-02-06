@@ -100,3 +100,26 @@ $a = 49;
 // 00110001
 echo $a << 3;
 // 110001000 => 392 DECIMAL
+
+echo "<hr>";
+
+// Vai retornar o quê?
+//echo chr((ord('a') + ord('A'))/2);
+
+class Magic { 
+    protected $v = array( 
+        "a" => 1, 
+        "b" => 2, 
+        "c" => 3 
+    ); 
+    public 
+
+    function __get($v) 
+    { 
+        return $this->v[$v]; 
+    } 
+} 
+
+$m = new Magic(); 
+$m->d[] = 4; 
+echo $m->d[0];

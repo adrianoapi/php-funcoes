@@ -77,7 +77,11 @@ class crawler
         ob_end_flush();
         $currentDepth = $this->_depth - $depth;
         $count = count($this->_seen);
-        echo "N::$count,CODE::$httpcode,TIME::$time,DEPTH::$currentDepth URL::$url <br>";
+        if($httpcode == 200){
+            echo "N::$count,<span class=\"success\">CODE::$httpcode</span>,TIME::$time,DEPTH::$currentDepth URL::$url <br>";
+        }else{
+            echo "N::$count,<span class=\"error\">CODE::$httpcode</span>,TIME::$time,DEPTH::$currentDepth URL::$url <br>";
+        }
         ob_start();
         flush();
     }

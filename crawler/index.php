@@ -1,4 +1,8 @@
-<style type="text/css">body{background-color: #000; color: #ccc;}</style>
+<style type="text/css">
+    body{background-color: #000; color: #ccc;}
+    .error{color:#cc0000;}
+    .success{color:#009933;}
+</style>
 <?php
 
 require_once 'Crawler.php';
@@ -21,7 +25,7 @@ $links = [
 $depth = 6;
 $username = 'YOURUSER';
 $password = 'YOURPASS';
-$crawler = new crawler($links[0]['link'], $depth);
+$crawler = new crawler($links[1]['link'], $depth);
 $crawler->setHttpAuth($username, $password);
 // Exclude path with the following structure to be processed 
 $crawler->addFilterPath('customer/account/login/referer');
