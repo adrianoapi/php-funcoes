@@ -8,4 +8,29 @@ try{
    throw new \Exception("Soup Request Failed! Response:\n".$client->__getLastResponse());
 }
 
+/*
+#########################################
+#########################################
+*/
+
+$client = new SoapClient("http://YOURIP/yourservice.asmx?wsdl",array(
+                        'exceptions'=>true,
+                        'cache_wsdl'=>WSDL_CACHE_NONE,
+                        'encoding'=>'utf-8'));
+$params = array(
+    'BuffID' => 134
+    );
+
+try 
+    {
+        $result = $client->QueueEntryGetStatus($params);
+        $status = $result->QueueEntryGetStatusResult;
+        /*do something*/ 
+    } 
+    catch (Exception $e) 
+    {
+        $e -> getMessage();
+        /*do something*/
+    }
+
 ?>
