@@ -1,0 +1,11 @@
+<?php
+
+$client = new \SoapClient("http://127.0.0.1/services/wsdl2",array('trace' => 1));
+
+try{
+   print_r($client->__SoapCall('routeCase', $params));
+}catch (\Exception $e){
+   throw new \Exception("Soup Request Failed! Response:\n".$client->__getLastResponse());
+}
+
+?>
